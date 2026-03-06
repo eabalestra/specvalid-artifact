@@ -208,4 +208,3 @@ specvalid-artifact/
     ├── pyproject.toml                     # Python project config
     └── uv.lock                            # Locked Python dependencies
 ```
-# specvalid-artifact
