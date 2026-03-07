@@ -1,0 +1,9 @@
+INFO:logger_6468478658808997652:Running bucketing (augmented) for RingBuffer_count.
+INFO:logger_6468478658808997652:Arguments: Namespace(list_llms=False, list_prompts=False, output_dir='output', command='testgen', no_invs_filtering=False, reuse_tests=False, target_class_src='/home/inv/ebalestra/specvalid-llama33/experiments/GAssert/subjects/ringbuffer_count/src/main/java/examples/RingBuffer.java', test_suite='/home/inv/ebalestra/specvalid-llama33/experiments/GAssert/subjects/ringbuffer_count/src/test/java/testers/RingBufferTester0.java', test_driver='/home/inv/ebalestra/specvalid-llama33/experiments/GAssert/subjects/ringbuffer_count/src/test/java/testers/RingBufferTesterDriver.java', buckets_assertions_file='/home/inv/ebalestra/specvalid-llama33/experiments/specfuzzer-subject-results/ringbuffer_count/output/RingBuffer-count-specfuzzer-1-buckets.assertions', method='count', models_list=['GPT4oMini'], models_prefix=None, prompts_list=['General_V1'], specfuzzer_invs_file='/home/inv/ebalestra/specvalid-llama33/experiments/specfuzzer-subject-results/ringbuffer_count/output/RingBuffer-count-specfuzzer-1.inv.gz', specfuzzer_assertions_file='/home/inv/ebalestra/specvalid-llama33/experiments/specfuzzer-subject-results/ringbuffer_count/output/RingBuffer-count-specfuzzer-1.assertions')
+INFO:logger_6468478658808997652:Found 1 models with compiled tests: ['N_Llama3370Instruct']
+INFO:logger_6468478658808997652:Running bucketing for model: N_Llama3370Instruct
+INFO:logger_6468478658808997652:Loaded 49 compiled tests for model N_Llama3370Instruct
+INFO:logger_6468478658808997652:Cleaning project before updating suites
+INFO:logger_6468478658808997652:Compiling augmented project
+INFO:logger_6468478658808997652:Running DynComp and Chicory for driver testers.RingBufferTesterDriverAugmentedNLlama3370Instruct (model N_Llama3370Instruct)
+ERROR:logger_6468478658808997652:❌ Error during bucketing: sequence item 5: expected str instance, PosixPath found

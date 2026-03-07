@@ -1,0 +1,16 @@
+buckets=6
+specs=10
+=====================================
+:::OBJECT
+FuzzedInvariant ( Integer_Variable_0 > -1 ) holds for: this.front
+this.back <= daikon.Quant.size(this.theArray)-1
+this.currentSize <= daikon.Quant.size(this.theArray)
+this.front == 0 || this.front == 1 || this.front == 2
+=====================================
+:::POSTCONDITION
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 - -1 ) holds for: <this.back, orig(this.currentSize)>
+\old(this.currentSize) <= daikon.Quant.size(this.theArray)
+this.front <= daikon.Quant.size(this.theArray)-1
+this.currentSize <= daikon.Quant.size(this.theArray)-1
+this.currentSize == 0
+\old(this.front) <= daikon.Quant.size(this.theArray)-1

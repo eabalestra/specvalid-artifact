@@ -1,0 +1,3 @@
+this.var62 == \result
+\result == \old(this.var62)
+FuzzedInvariant ( Integer_Variable_0 != -1 ) holds for: this.var62

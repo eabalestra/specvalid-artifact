@@ -1,0 +1,245 @@
+daikon.Quant.size(this.max_child.parent.children) == 1 || daikon.Quant.size(this.max_child.parent.children) == 2 || daikon.Quant.size(this.max_child.parent.children) == 3
+daikon.Quant.size(this.children) == 1 || daikon.Quant.size(this.children) == 2 || daikon.Quant.size(this.children) == 3
+daikon.Quant.size(c.parent.children) == 1 || daikon.Quant.size(c.parent.children) == 2 || daikon.Quant.size(c.parent.children) == 3
+FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 % Integer_Variable_2 ) holds for: <this.value , this.max_child.value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 % Integer_Variable_2 ) holds for: <this.value , orig(this.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 % Integer_Variable_2 ) holds for: <this.value , orig(this.max_child.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 % Integer_Variable_2 ) holds for: <this.value , c.value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 % Integer_Variable_2 ) holds for: <this.max_child.value , orig(this.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 % Integer_Variable_2 ) holds for: <this.max_child.value , orig(this.max_child.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 % Integer_Variable_2 ) holds for: <this.max_child.value , c.value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 % Integer_Variable_2 ) holds for: <orig(this.value) , orig(this.max_child.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 > Integer_Variable_1 + Integer_Variable_2 ) holds for: <this.value , this.max_child.value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 > Integer_Variable_1 + Integer_Variable_2 ) holds for: <this.value , c.value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 > Integer_Variable_1 + Integer_Variable_2 ) holds for: <this.max_child.value , c.value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 > Integer_Variable_1 + Integer_Variable_2 ) holds for: <this.init_value , this.max_child.parent.init_value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 > Integer_Variable_1 + Integer_Variable_2 ) holds for: <orig(this.value) , orig(this.max_child.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 > Integer_Variable_1 + 1 ) holds for: <orig(this.value), orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 > Integer_Variable_1 + 1 ) holds for: <orig(this.max_child.value), orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 <= Integer_Variable_1 / Integer_Variable_2 ) holds for: <this.max_child.parent.init_value , orig(this.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 <= Integer_Variable_1 / Integer_Variable_2 ) holds for: <this.max_child.parent.init_value , orig(this.max_child.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 <= Integer_Variable_1 / Integer_Variable_2 ) holds for: <this.max_child.parent.init_value , c.value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 <= Integer_Variable_1 / Integer_Variable_2 ) holds for: <this.init_value , this.max_child.value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 <= Integer_Variable_1 / Integer_Variable_2 ) holds for: <this.init_value , this.max_child.parent.init_value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 <= Integer_Variable_1 / Integer_Variable_2 ) holds for: <this.init_value , orig(this.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 <= Integer_Variable_1 / Integer_Variable_2 ) holds for: <this.init_value , orig(this.max_child.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 <= Integer_Variable_1 / Integer_Variable_2 ) holds for: <this.init_value , c.value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 <= Integer_Variable_1 * Integer_Variable_2 ) holds for: <this.value , this.max_child.parent.init_value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 <= Integer_Variable_1 * Integer_Variable_2 ) holds for: <this.value , this.init_value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 <= Integer_Variable_1 * Integer_Variable_2 ) holds for: <this.max_child.value , this.max_child.parent.init_value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 <= Integer_Variable_1 % Integer_Variable_2 ) holds for: <this.max_child.parent.init_value , orig(this.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 <= Integer_Variable_1 % Integer_Variable_2 ) holds for: <this.max_child.parent.init_value , orig(this.max_child.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 <= Integer_Variable_1 % Integer_Variable_2 ) holds for: <this.max_child.parent.init_value , c.value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 <= Integer_Variable_1 % Integer_Variable_2 ) holds for: <this.init_value , this.max_child.value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 <= Integer_Variable_1 % Integer_Variable_2 ) holds for: <this.init_value , this.max_child.parent.init_value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 <= Integer_Variable_1 % Integer_Variable_2 ) holds for: <this.init_value , orig(this.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 <= Integer_Variable_1 % Integer_Variable_2 ) holds for: <this.init_value , orig(this.max_child.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 <= Integer_Variable_1 % Integer_Variable_2 ) holds for: <this.init_value , c.value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 <= -1 ) holds for: orig(this.max_child.parent.init_value)
+FuzzedInvariant ( Integer_Variable_0 < Integer_Variable_1 / Integer_Variable_2 ) holds for: <this.max_child.parent.init_value , orig(this.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 < Integer_Variable_1 / Integer_Variable_2 ) holds for: <this.max_child.parent.init_value , orig(this.max_child.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 < Integer_Variable_1 / Integer_Variable_2 ) holds for: <this.max_child.parent.init_value , c.value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 < Integer_Variable_1 / Integer_Variable_2 ) holds for: <this.init_value , this.max_child.value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 < Integer_Variable_1 / Integer_Variable_2 ) holds for: <this.init_value , this.max_child.parent.init_value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 < Integer_Variable_1 / Integer_Variable_2 ) holds for: <this.init_value , orig(this.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 < Integer_Variable_1 / Integer_Variable_2 ) holds for: <this.init_value , orig(this.max_child.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 < Integer_Variable_1 / Integer_Variable_2 ) holds for: <this.init_value , c.value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 < Integer_Variable_1 - Integer_Variable_2 ) holds for: <this.value , this.max_child.value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 < Integer_Variable_1 - Integer_Variable_2 ) holds for: <this.max_child.parent.init_value , orig(this.value) , orig(this.max_child.value)>
+FuzzedInvariant ( Integer_Variable_0 < Integer_Variable_1 - Integer_Variable_2 ) holds for: <this.init_value , this.max_child.parent.init_value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 < Integer_Variable_1 - Integer_Variable_2 ) holds for: <this.init_value , orig(this.value) , orig(this.max_child.value)>
+FuzzedInvariant ( Integer_Variable_0 < Integer_Variable_1 - Integer_Variable_2 ) holds for: <orig(this.value) , orig(this.max_child.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 < Integer_Variable_1 + -1 ) holds for: <this.max_child.parent.init_value, orig(this.max_child.value)>
+FuzzedInvariant ( Integer_Variable_0 < Integer_Variable_1 + -1 ) holds for: <this.init_value, orig(this.max_child.value)>
+FuzzedInvariant ( Integer_Variable_0 < Integer_Variable_1 * Integer_Variable_2 ) holds for: <this.value , this.max_child.parent.init_value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 < Integer_Variable_1 * Integer_Variable_2 ) holds for: <this.value , this.init_value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 < Integer_Variable_1 * Integer_Variable_2 ) holds for: <this.max_child.value , this.max_child.parent.init_value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 < Integer_Variable_1 * Integer_Variable_2 ) holds for: <this.init_value , this.max_child.parent.init_value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 < Integer_Variable_1 * -1 ) holds for: <this.max_child.parent.init_value, orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 < Integer_Variable_1 * -1 ) holds for: <this.init_value, orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 < Integer_Variable_1 % Integer_Variable_2 ) holds for: <this.max_child.parent.init_value , orig(this.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 < Integer_Variable_1 % Integer_Variable_2 ) holds for: <this.max_child.parent.init_value , orig(this.max_child.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 < Integer_Variable_1 % Integer_Variable_2 ) holds for: <this.max_child.parent.init_value , c.value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 < Integer_Variable_1 % Integer_Variable_2 ) holds for: <this.init_value , this.max_child.value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 < Integer_Variable_1 % Integer_Variable_2 ) holds for: <this.init_value , this.max_child.parent.init_value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 < Integer_Variable_1 % Integer_Variable_2 ) holds for: <this.init_value , orig(this.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 < Integer_Variable_1 % Integer_Variable_2 ) holds for: <this.init_value , orig(this.max_child.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 < Integer_Variable_1 % Integer_Variable_2 ) holds for: <this.init_value , c.value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 < Integer_Variable_1 % 1 ) holds for: <this.max_child.parent.init_value, orig(this.max_child.value)>
+FuzzedInvariant ( Integer_Variable_0 < Integer_Variable_1 % 1 ) holds for: <this.max_child.parent.init_value, orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 < Integer_Variable_1 % 1 ) holds for: <this.init_value, orig(this.max_child.value)>
+FuzzedInvariant ( Integer_Variable_0 < Integer_Variable_1 % 1 ) holds for: <this.init_value, orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 < Integer_Variable_1 % -1 ) holds for: <this.max_child.parent.init_value, orig(this.max_child.value)>
+FuzzedInvariant ( Integer_Variable_0 < Integer_Variable_1 % -1 ) holds for: <this.max_child.parent.init_value, orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 < Integer_Variable_1 % -1 ) holds for: <this.init_value, orig(this.max_child.value)>
+FuzzedInvariant ( Integer_Variable_0 < Integer_Variable_1 % -1 ) holds for: <this.init_value, orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 < 0 ) holds for: orig(this.max_child.parent.init_value)
+FuzzedInvariant ( Integer_Variable_0 < -1 ) holds for: orig(this.max_child.parent.init_value)
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 / Integer_Variable_2 ) holds for: <this.value , this.max_child.value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 / Integer_Variable_2 ) holds for: <this.value , orig(this.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 / Integer_Variable_2 ) holds for: <this.value , orig(this.max_child.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 / Integer_Variable_2 ) holds for: <this.max_child.value , orig(this.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 / Integer_Variable_2 ) holds for: <this.max_child.value , orig(this.max_child.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 / Integer_Variable_2 ) holds for: <this.max_child.parent.init_value , orig(this.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 / Integer_Variable_2 ) holds for: <this.max_child.parent.init_value , orig(this.max_child.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 / Integer_Variable_2 ) holds for: <this.max_child.parent.init_value , c.value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 / Integer_Variable_2 ) holds for: <this.init_value , this.max_child.value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 / Integer_Variable_2 ) holds for: <this.init_value , this.max_child.parent.init_value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 / Integer_Variable_2 ) holds for: <this.init_value , orig(this.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 / Integer_Variable_2 ) holds for: <this.init_value , orig(this.max_child.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 / Integer_Variable_2 ) holds for: <this.init_value , c.value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 / Integer_Variable_2 ) holds for: <c.value , orig(this.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 / Integer_Variable_2 ) holds for: <c.value , orig(this.max_child.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 / -1 ) holds for: <this.max_child.parent.init_value, orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 / -1 ) holds for: <this.init_value, orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 - Integer_Variable_2 ) holds for: <this.value , this.max_child.value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 - Integer_Variable_2 ) holds for: <this.value , c.value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 - Integer_Variable_2 ) holds for: <this.max_child.value , c.value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 - Integer_Variable_2 ) holds for: <this.max_child.parent.init_value , orig(this.value) , orig(this.max_child.value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 - Integer_Variable_2 ) holds for: <this.init_value , this.max_child.parent.init_value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 - Integer_Variable_2 ) holds for: <this.init_value , orig(this.value) , orig(this.max_child.value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 - Integer_Variable_2 ) holds for: <orig(this.value) , orig(this.max_child.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 - 1 ) holds for: <this.max_child.parent.init_value, orig(this.max_child.value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 - 1 ) holds for: <this.init_value, orig(this.max_child.value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 - -1 ) holds for: <orig(this.value), this.max_child.parent.init_value>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 - -1 ) holds for: <orig(this.value), orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 - -1 ) holds for: <orig(this.max_child.value), orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 + Integer_Variable_2 ) holds for: <this.value , this.max_child.value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 + Integer_Variable_2 ) holds for: <this.value , orig(this.value) , orig(this.max_child.value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 + Integer_Variable_2 ) holds for: <this.value , c.value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 + Integer_Variable_2 ) holds for: <this.max_child.value , orig(this.value) , orig(this.max_child.value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 + Integer_Variable_2 ) holds for: <this.max_child.value , c.value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 + Integer_Variable_2 ) holds for: <this.init_value , this.max_child.parent.init_value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 + Integer_Variable_2 ) holds for: <orig(this.value) , orig(this.max_child.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 + 1 ) holds for: <orig(this.value), this.max_child.parent.init_value>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 + 1 ) holds for: <orig(this.value), orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 + 1 ) holds for: <orig(this.max_child.value), orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 * Integer_Variable_2 ) holds for: <this.value , this.max_child.value , orig(this.max_child.value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 * Integer_Variable_2 ) holds for: <this.value , c.value , orig(this.max_child.value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 * Integer_Variable_2 ) holds for: <this.max_child.value , c.value , orig(this.max_child.value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 * Integer_Variable_2 ) holds for: <this.max_child.parent.init_value , orig(this.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 * Integer_Variable_2 ) holds for: <this.max_child.parent.init_value , orig(this.max_child.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 * Integer_Variable_2 ) holds for: <this.init_value , this.max_child.parent.init_value , orig(this.max_child.value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 * Integer_Variable_2 ) holds for: <this.init_value , this.max_child.parent.init_value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 * Integer_Variable_2 ) holds for: <this.init_value , orig(this.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 * Integer_Variable_2 ) holds for: <this.init_value , orig(this.max_child.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 % Integer_Variable_2 ) holds for: <this.value , this.max_child.parent.init_value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 % Integer_Variable_2 ) holds for: <this.value , this.init_value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 % Integer_Variable_2 ) holds for: <this.max_child.value , this.max_child.parent.init_value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 % Integer_Variable_2 ) holds for: <this.max_child.parent.init_value , orig(this.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 % Integer_Variable_2 ) holds for: <this.max_child.parent.init_value , orig(this.max_child.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 % Integer_Variable_2 ) holds for: <this.max_child.parent.init_value , c.value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 % Integer_Variable_2 ) holds for: <this.init_value , this.max_child.value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 % Integer_Variable_2 ) holds for: <this.init_value , this.max_child.parent.init_value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 % Integer_Variable_2 ) holds for: <this.init_value , orig(this.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 % Integer_Variable_2 ) holds for: <this.init_value , orig(this.max_child.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 % Integer_Variable_2 ) holds for: <this.init_value , c.value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 % -1 ) holds for: <this.max_child.parent.init_value, orig(this.max_child.value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 % -1 ) holds for: <this.max_child.parent.init_value, orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 % -1 ) holds for: <this.init_value, orig(this.max_child.value)>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 % -1 ) holds for: <this.init_value, orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( Integer_Variable_0 != 1 ) holds for: orig(this.max_child.value)
+FuzzedInvariant ( Integer_Variable_0 != 0 ) holds for: orig(this.max_child.parent.init_value)
+FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) or (Integer_Variable_1 != 1) ) holds for: <this.max_child.parent.init_value, orig(this.max_child.value)>
+FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) or (Integer_Variable_1 != 1) ) holds for: <this.init_value, orig(this.max_child.value)>
+FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) iff (Integer_Variable_1 != 1) ) holds for: <this.value, orig(this.max_child.value)>
+FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) iff (Integer_Variable_1 != 1) ) holds for: <this.max_child.value, orig(this.max_child.value)>
+FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) iff (Integer_Variable_1 != 1) ) holds for: <orig(this.value), orig(this.max_child.value)>
+FuzzedInvariant ( (Integer_Variable_0 >= 1) xor (Integer_Variable_1 < -1) ) holds for: <this.max_child.parent.init_value, orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 >= 1) xor (Integer_Variable_1 < -1) ) holds for: <this.init_value, orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 >= 1) implies (Integer_Variable_1 != 0) ) holds for: <this.value, orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 >= 1) implies (Integer_Variable_1 != 0) ) holds for: <this.max_child.value, orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 >= 1) implies (Integer_Variable_1 != 0) ) holds for: <orig(this.value), this.max_child.parent.init_value>
+FuzzedInvariant ( (Integer_Variable_0 >= 1) implies (Integer_Variable_1 != 0) ) holds for: <orig(this.value), orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 >= 1) implies (Integer_Variable_1 != 0) ) holds for: <orig(this.max_child.value), orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 >= 1) implies (Integer_Variable_1 != 0) ) holds for: <c.value, orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 >= 0) implies (Integer_Variable_1 <= -1) ) holds for: <this.value, orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 >= 0) implies (Integer_Variable_1 <= -1) ) holds for: <this.max_child.value, orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 >= 0) implies (Integer_Variable_1 <= -1) ) holds for: <this.max_child.parent.init_value, orig(this.max_child.value)>
+FuzzedInvariant ( (Integer_Variable_0 >= 0) implies (Integer_Variable_1 <= -1) ) holds for: <this.max_child.parent.init_value, orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 >= 0) implies (Integer_Variable_1 <= -1) ) holds for: <this.init_value, orig(this.max_child.value)>
+FuzzedInvariant ( (Integer_Variable_0 >= 0) implies (Integer_Variable_1 <= -1) ) holds for: <this.init_value, orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 >= 0) implies (Integer_Variable_1 <= -1) ) holds for: <orig(this.value), orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 >= 0) implies (Integer_Variable_1 <= -1) ) holds for: <orig(this.max_child.value), orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 >= 0) implies (Integer_Variable_1 <= -1) ) holds for: <c.value, orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 >= -1) xor (Integer_Variable_1 >= Integer_Variable_2) ) holds for: <this.max_child.parent.init_value , orig(this.value) , orig(this.max_child.value)>
+FuzzedInvariant ( (Integer_Variable_0 >= -1) xor (Integer_Variable_1 >= Integer_Variable_2) ) holds for: <this.max_child.parent.init_value , orig(this.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 >= -1) xor (Integer_Variable_1 >= Integer_Variable_2) ) holds for: <this.max_child.parent.init_value , orig(this.max_child.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 >= -1) xor (Integer_Variable_1 >= Integer_Variable_2) ) holds for: <this.init_value , this.max_child.value , orig(this.max_child.value)>
+FuzzedInvariant ( (Integer_Variable_0 >= -1) xor (Integer_Variable_1 >= Integer_Variable_2) ) holds for: <this.init_value , this.max_child.value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 >= -1) xor (Integer_Variable_1 >= Integer_Variable_2) ) holds for: <this.init_value , this.max_child.parent.init_value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 >= -1) xor (Integer_Variable_1 >= Integer_Variable_2) ) holds for: <this.init_value , orig(this.value) , orig(this.max_child.value)>
+FuzzedInvariant ( (Integer_Variable_0 >= -1) xor (Integer_Variable_1 >= Integer_Variable_2) ) holds for: <this.init_value , orig(this.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 >= -1) xor (Integer_Variable_1 >= Integer_Variable_2) ) holds for: <this.init_value , orig(this.max_child.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 >= -1) xor (Integer_Variable_1 > Integer_Variable_2) ) holds for: <this.max_child.parent.init_value , orig(this.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 >= -1) xor (Integer_Variable_1 > Integer_Variable_2) ) holds for: <this.max_child.parent.init_value , orig(this.max_child.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 >= -1) xor (Integer_Variable_1 > Integer_Variable_2) ) holds for: <this.init_value , this.max_child.value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 >= -1) xor (Integer_Variable_1 > Integer_Variable_2) ) holds for: <this.init_value , orig(this.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 >= -1) xor (Integer_Variable_1 > Integer_Variable_2) ) holds for: <this.init_value , orig(this.max_child.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 >= -1) implies (Integer_Variable_1 = Integer_Variable_2) ) holds for: <this.max_child.parent.init_value , orig(this.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 >= -1) implies (Integer_Variable_1 = Integer_Variable_2) ) holds for: <this.max_child.parent.init_value , orig(this.max_child.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 >= -1) implies (Integer_Variable_1 = Integer_Variable_2) ) holds for: <this.max_child.parent.init_value , c.value , orig(this.max_child.value)>
+FuzzedInvariant ( (Integer_Variable_0 >= -1) implies (Integer_Variable_1 = Integer_Variable_2) ) holds for: <this.max_child.parent.init_value , c.value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 >= -1) implies (Integer_Variable_1 = Integer_Variable_2) ) holds for: <this.init_value , this.max_child.value , orig(this.max_child.value)>
+FuzzedInvariant ( (Integer_Variable_0 >= -1) implies (Integer_Variable_1 = Integer_Variable_2) ) holds for: <this.init_value , this.max_child.value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 >= -1) implies (Integer_Variable_1 = Integer_Variable_2) ) holds for: <this.init_value , this.max_child.parent.init_value , orig(this.max_child.value)>
+FuzzedInvariant ( (Integer_Variable_0 >= -1) implies (Integer_Variable_1 = Integer_Variable_2) ) holds for: <this.init_value , orig(this.value) , this.max_child.parent.init_value>
+FuzzedInvariant ( (Integer_Variable_0 >= -1) implies (Integer_Variable_1 = Integer_Variable_2) ) holds for: <this.init_value , orig(this.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 >= -1) implies (Integer_Variable_1 = Integer_Variable_2) ) holds for: <this.init_value , orig(this.max_child.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 >= -1) implies (Integer_Variable_1 = Integer_Variable_2) ) holds for: <this.init_value , c.value , orig(this.max_child.value)>
+FuzzedInvariant ( (Integer_Variable_0 >= -1) implies (Integer_Variable_1 = Integer_Variable_2) ) holds for: <this.init_value , c.value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 >= -1) implies (Integer_Variable_1 <= Integer_Variable_2) ) holds for: <this.max_child.parent.init_value , orig(this.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 >= -1) implies (Integer_Variable_1 <= Integer_Variable_2) ) holds for: <this.max_child.parent.init_value , orig(this.max_child.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 >= -1) implies (Integer_Variable_1 <= Integer_Variable_2) ) holds for: <this.max_child.parent.init_value , c.value , orig(this.max_child.value)>
+FuzzedInvariant ( (Integer_Variable_0 >= -1) implies (Integer_Variable_1 <= Integer_Variable_2) ) holds for: <this.max_child.parent.init_value , c.value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 >= -1) implies (Integer_Variable_1 <= Integer_Variable_2) ) holds for: <this.init_value , this.max_child.value , orig(this.max_child.value)>
+FuzzedInvariant ( (Integer_Variable_0 >= -1) implies (Integer_Variable_1 <= Integer_Variable_2) ) holds for: <this.init_value , this.max_child.value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 >= -1) implies (Integer_Variable_1 <= Integer_Variable_2) ) holds for: <this.init_value , orig(this.value) , this.max_child.parent.init_value>
+FuzzedInvariant ( (Integer_Variable_0 >= -1) implies (Integer_Variable_1 <= Integer_Variable_2) ) holds for: <this.init_value , orig(this.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 >= -1) implies (Integer_Variable_1 <= Integer_Variable_2) ) holds for: <this.init_value , orig(this.max_child.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 >= -1) implies (Integer_Variable_1 <= Integer_Variable_2) ) holds for: <this.init_value , c.value , orig(this.max_child.value)>
+FuzzedInvariant ( (Integer_Variable_0 >= -1) implies (Integer_Variable_1 <= Integer_Variable_2) ) holds for: <this.init_value , c.value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 >= -1) iff (Integer_Variable_1 >= Integer_Variable_2) ) holds for: <this.init_value , this.max_child.parent.init_value , orig(this.max_child.value)>
+FuzzedInvariant ( (Integer_Variable_0 >= -1) iff (Integer_Variable_1 > 1) ) holds for: <this.max_child.parent.init_value, orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 >= -1) iff (Integer_Variable_1 > 1) ) holds for: <this.init_value, orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 > Integer_Variable_1) or (Integer_Variable_1 != 1) ) holds for: <this.max_child.parent.init_value, orig(this.max_child.value)>
+FuzzedInvariant ( (Integer_Variable_0 > Integer_Variable_1) or (Integer_Variable_1 != 1) ) holds for: <this.init_value, orig(this.max_child.value)>
+FuzzedInvariant ( (Integer_Variable_0 > Integer_Variable_1) or (Integer_Variable_1 != 1) ) holds for: <orig(this.value), orig(this.max_child.value)>
+FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) or (Integer_Variable_1 < 1) ) holds for: <this.value, orig(this.max_child.value)>
+FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) or (Integer_Variable_1 < 1) ) holds for: <this.max_child.value, orig(this.max_child.value)>
+FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) iff (Integer_Variable_1 = 1) ) holds for: <this.max_child.parent.init_value, orig(this.max_child.value)>
+FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) iff (Integer_Variable_1 = 1) ) holds for: <this.init_value, orig(this.max_child.value)>
+FuzzedInvariant ( (Integer_Variable_0 = 1) implies (Integer_Variable_1 <= -1) ) holds for: <orig(this.value), orig(this.max_child.value)>
+FuzzedInvariant ( (Integer_Variable_0 = 1) implies (Integer_Variable_1 <= -1) ) holds for: <orig(this.value), orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 = 1) implies (Integer_Variable_1 <= -1) ) holds for: <orig(this.max_child.value), orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 = 0) xor (Integer_Variable_1 <= Integer_Variable_2) ) holds for: <this.max_child.parent.init_value , orig(this.value) , orig(this.max_child.value)>
+FuzzedInvariant ( (Integer_Variable_0 = 0) xor (Integer_Variable_1 <= Integer_Variable_2) ) holds for: <this.init_value , this.max_child.parent.init_value , orig(this.max_child.value)>
+FuzzedInvariant ( (Integer_Variable_0 = 0) xor (Integer_Variable_1 <= Integer_Variable_2) ) holds for: <this.init_value , this.max_child.parent.init_value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 = 0) xor (Integer_Variable_1 <= Integer_Variable_2) ) holds for: <this.init_value , orig(this.value) , orig(this.max_child.value)>
+FuzzedInvariant ( (Integer_Variable_0 = 0) xor (Integer_Variable_1 <= 0) ) holds for: <this.max_child.parent.init_value, orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 = 0) xor (Integer_Variable_1 <= 0) ) holds for: <this.init_value, orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 = -1) iff (Integer_Variable_1 > -1) ) holds for: <this.value, orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 = -1) iff (Integer_Variable_1 > -1) ) holds for: <this.max_child.value, orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 = -1) iff (Integer_Variable_1 > -1) ) holds for: <this.max_child.parent.init_value, orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 = -1) iff (Integer_Variable_1 > -1) ) holds for: <this.init_value, orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 = -1) iff (Integer_Variable_1 > -1) ) holds for: <orig(this.value), orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 = -1) iff (Integer_Variable_1 > -1) ) holds for: <orig(this.max_child.value), orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 = -1) iff (Integer_Variable_1 > -1) ) holds for: <c.value, orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 <= Integer_Variable_1) xor (Integer_Variable_1 != 0) ) holds for: <this.value, orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 <= Integer_Variable_1) xor (Integer_Variable_1 != 0) ) holds for: <this.max_child.value, orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 <= Integer_Variable_1) xor (Integer_Variable_1 != 0) ) holds for: <orig(this.value), orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 <= Integer_Variable_1) xor (Integer_Variable_1 != 0) ) holds for: <orig(this.max_child.value), orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) xor (Integer_Variable_1 = 1) ) holds for: <this.max_child.parent.init_value, orig(this.max_child.value)>
+FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) xor (Integer_Variable_1 = 1) ) holds for: <this.init_value, orig(this.max_child.value)>
+FuzzedInvariant ( (Integer_Variable_0 < -1) xor (Integer_Variable_1 > 1) ) holds for: <this.max_child.parent.init_value, orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 < -1) xor (Integer_Variable_1 > 1) ) holds for: <this.init_value, orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 < -1) or (Integer_Variable_1 != Integer_Variable_2) ) holds for: <this.max_child.parent.init_value , orig(this.value) , orig(this.max_child.value)>
+FuzzedInvariant ( (Integer_Variable_0 < -1) or (Integer_Variable_1 != Integer_Variable_2) ) holds for: <this.init_value , this.max_child.parent.init_value , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 < -1) or (Integer_Variable_1 != Integer_Variable_2) ) holds for: <this.init_value , orig(this.value) , orig(this.max_child.value)>
+FuzzedInvariant ( (Integer_Variable_0 != 1) xor (Integer_Variable_1 <= Integer_Variable_2) ) holds for: <orig(this.value) , orig(this.max_child.value) , orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 != 0) xor (Integer_Variable_1 = -1) ) holds for: <this.max_child.parent.init_value, orig(this.max_child.value)>
+FuzzedInvariant ( (Integer_Variable_0 != 0) xor (Integer_Variable_1 = -1) ) holds for: <this.max_child.parent.init_value, orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 != 0) xor (Integer_Variable_1 = -1) ) holds for: <this.init_value, orig(this.max_child.value)>
+FuzzedInvariant ( (Integer_Variable_0 != 0) xor (Integer_Variable_1 = -1) ) holds for: <this.init_value, orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 != 0) or (Integer_Variable_1 != 0) ) holds for: <this.max_child.parent.init_value, orig(this.max_child.parent.init_value)>
+FuzzedInvariant ( (Integer_Variable_0 != 0) or (Integer_Variable_1 != 0) ) holds for: <this.init_value, orig(this.max_child.parent.init_value)>

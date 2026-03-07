@@ -1,0 +1,4 @@
+\result - \old(a) + \old(b) == 0
+FuzzedInvariant ( Long_Variable_0 >= Long_Variable_1 + Long_Variable_2 ) holds for: <orig(a) , orig(b) , return>
+FuzzedInvariant ( Long_Variable_0 = Long_Variable_1 + Long_Variable_2 ) holds for: <orig(a) , orig(b) , return>
+FuzzedInvariant ( Long_Variable_0 <= Long_Variable_1 + Long_Variable_2 ) holds for: <orig(a) , orig(b) , return>

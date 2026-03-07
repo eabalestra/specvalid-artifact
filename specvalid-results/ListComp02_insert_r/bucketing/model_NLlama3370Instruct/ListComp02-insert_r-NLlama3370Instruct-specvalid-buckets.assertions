@@ -1,0 +1,10 @@
+buckets=4
+specs=4
+=====================================
+:::OBJECT
+daikon.Quant.eltsEqual(daikon.Quant.typeArray(this._var49), null)
+=====================================
+:::POSTCONDITION
+this._var49 != null
+daikon.Quant.size(this._var49)-1 == \old(daikon.Quant.size(this._var49))
+daikon.Quant.size(this._var49) == 1 || daikon.Quant.size(this._var49) == 2 || daikon.Quant.size(this._var49) == 3

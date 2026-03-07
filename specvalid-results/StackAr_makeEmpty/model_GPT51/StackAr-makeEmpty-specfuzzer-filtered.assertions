@@ -1,0 +1,4 @@
+this.topOfStack < daikon.Quant.size(this.theArray)-1
+\old(this.topOfStack) < daikon.Quant.size(this.theArray)-1
+FuzzedInvariant ( Integer_Variable_0 <= Integer_Variable_1 / -1 ) holds for: <this.topOfStack, orig(this.topOfStack)>
+FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) or (Integer_Variable_1 <= 1) ) holds for: <this.topOfStack, orig(this.topOfStack)>

@@ -1,0 +1,1042 @@
+INFO:logger_4972490673075061607:Running bucketing (augmented) for IntMath_mod.
+INFO:logger_4972490673075061607:Arguments: Namespace(list_llms=False, list_prompts=False, output_dir='output', command='testgen', no_invs_filtering=False, reuse_tests=False, target_class_src='/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/src/main/java/math/IntMath.java', test_suite='/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/src/test/java/testers/IntMathTester0.java', test_driver='/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/src/test/java/testers/IntMathTesterDriver.java', buckets_assertions_file='/home/inv/ebalestra/specvalid/experiments/specfuzzer-subject-results/IntMath_mod/output/IntMath-mod-specfuzzer-1-buckets.assertions', method='mod', models_list=['GPT4oMini'], models_prefix=None, prompts_list=['General_V1'], specfuzzer_invs_file='/home/inv/ebalestra/specvalid/experiments/specfuzzer-subject-results/IntMath_mod/output/IntMath-mod-specfuzzer-1.inv.gz', specfuzzer_assertions_file='/home/inv/ebalestra/specvalid/experiments/specfuzzer-subject-results/IntMath_mod/output/IntMath-mod-specfuzzer-1.assertions')
+INFO:logger_4972490673075061607:Found 3 models with compiled tests: ['GPT51', 'N_DeepSeekR1', 'N_Llama3370Instruct']
+INFO:logger_4972490673075061607:Running bucketing for model: GPT51
+INFO:logger_4972490673075061607:Loaded 25 compiled tests for model GPT51
+INFO:logger_4972490673075061607:Cleaning project before updating suites
+INFO:logger_4972490673075061607:Compiling augmented project
+INFO:logger_4972490673075061607:Running DynComp and Chicory for driver testers.IntMathTesterDriverAugmentedGPT51 (model GPT51)
+INFO:logger_4972490673075061607:Generating mutant traces with Major + Chicory for model GPT51
+INFO:logger_4972490673075061607:Generating mutants with Major -> /home/inv/ebalestra/specvalid/experiments/major/bin/javac -cp /home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main:/home/inv/ebalestra/specvalid/libs/antlr-4.7.1-complete.jar:/home/inv/ebalestra/specvalid/libs/daikon.jar:/home/inv/ebalestra/specvalid/libs/junit-4.12.jar:/home/inv/ebalestra/specvalid/libs/FuzzSpecs.jar -nowarn -J-Dmajor.export.mutants=true -XMutator:ALL -d /home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main /home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/src/main/java/math/IntMath.java
+INFO:logger_4972490673075061607:Compiling mutant source /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/major_workspace/mutants/1/math/IntMath.java -> javac -cp /home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main:/home/inv/ebalestra/specvalid/libs/antlr-4.7.1-complete.jar:/home/inv/ebalestra/specvalid/libs/daikon.jar:/home/inv/ebalestra/specvalid/libs/junit-4.12.jar:/home/inv/ebalestra/specvalid/libs/FuzzSpecs.jar -g /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/major_workspace/mutants/1/math/IntMath.java -d /home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main
+INFO:logger_4972490673075061607:Running Chicory for mutant 1 -> java -cp /home/inv/ebalestra/specvalid/libs/antlr-4.7.1-complete.jar:/home/inv/ebalestra/specvalid/libs/daikon.jar:/home/inv/ebalestra/specvalid/libs/junit-4.12.jar:/home/inv/ebalestra/specvalid/libs/FuzzSpecs.jar:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/test daikon.Chicory --output-dir /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants --comparability-file /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/daikon/IntMathTesterDriverAugmentedGPT51.decls-DynComp --ppt-omit-pattern IntMathTesterDriverAugmentedGPT51.* --ppt-omit-pattern org.junit.* --dtrace-file IntMathTesterDriverAugmentedGPT51-m1.dtrace.gz testers.IntMathTesterDriverAugmentedGPT51 ../mutants/IntMathTesterDriverAugmentedGPT51-m1-objects.xml
+INFO:logger_4972490673075061607:Chicory error for mutant 1: Command failed (Running Chicory for mutant 1): Command '['java', '-cp', '/home/inv/ebalestra/specvalid/libs/antlr-4.7.1-complete.jar:/home/inv/ebalestra/specvalid/libs/daikon.jar:/home/inv/ebalestra/specvalid/libs/junit-4.12.jar:/home/inv/ebalestra/specvalid/libs/FuzzSpecs.jar:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/test', 'daikon.Chicory', '--output-dir', '/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants', '--comparability-file', '/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/daikon/IntMathTesterDriverAugmentedGPT51.decls-DynComp', '--ppt-omit-pattern', 'IntMathTesterDriverAugmentedGPT51.*', '--ppt-omit-pattern', 'org.junit.*', '--dtrace-file', 'IntMathTesterDriverAugmentedGPT51-m1.dtrace.gz', 'testers.IntMathTesterDriverAugmentedGPT51', '../mutants/IntMathTesterDriverAugmentedGPT51-m1-objects.xml']' returned non-zero exit status 1.
+INFO:logger_4972490673075061607:Compiling mutant source /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/major_workspace/mutants/10/math/IntMath.java -> javac -cp /home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main:/home/inv/ebalestra/specvalid/libs/antlr-4.7.1-complete.jar:/home/inv/ebalestra/specvalid/libs/daikon.jar:/home/inv/ebalestra/specvalid/libs/junit-4.12.jar:/home/inv/ebalestra/specvalid/libs/FuzzSpecs.jar -g /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/major_workspace/mutants/10/math/IntMath.java -d /home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main
+INFO:logger_4972490673075061607:Running Chicory for mutant 10 -> java -cp /home/inv/ebalestra/specvalid/libs/antlr-4.7.1-complete.jar:/home/inv/ebalestra/specvalid/libs/daikon.jar:/home/inv/ebalestra/specvalid/libs/junit-4.12.jar:/home/inv/ebalestra/specvalid/libs/FuzzSpecs.jar:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/test daikon.Chicory --output-dir /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants --comparability-file /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/daikon/IntMathTesterDriverAugmentedGPT51.decls-DynComp --ppt-omit-pattern IntMathTesterDriverAugmentedGPT51.* --ppt-omit-pattern org.junit.* --dtrace-file IntMathTesterDriverAugmentedGPT51-m10.dtrace.gz testers.IntMathTesterDriverAugmentedGPT51 ../mutants/IntMathTesterDriverAugmentedGPT51-m10-objects.xml
+INFO:logger_4972490673075061607:Compiling mutant source /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/major_workspace/mutants/11/math/IntMath.java -> javac -cp /home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main:/home/inv/ebalestra/specvalid/libs/antlr-4.7.1-complete.jar:/home/inv/ebalestra/specvalid/libs/daikon.jar:/home/inv/ebalestra/specvalid/libs/junit-4.12.jar:/home/inv/ebalestra/specvalid/libs/FuzzSpecs.jar -g /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/major_workspace/mutants/11/math/IntMath.java -d /home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main
+INFO:logger_4972490673075061607:Running Chicory for mutant 11 -> java -cp /home/inv/ebalestra/specvalid/libs/antlr-4.7.1-complete.jar:/home/inv/ebalestra/specvalid/libs/daikon.jar:/home/inv/ebalestra/specvalid/libs/junit-4.12.jar:/home/inv/ebalestra/specvalid/libs/FuzzSpecs.jar:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/test daikon.Chicory --output-dir /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants --comparability-file /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/daikon/IntMathTesterDriverAugmentedGPT51.decls-DynComp --ppt-omit-pattern IntMathTesterDriverAugmentedGPT51.* --ppt-omit-pattern org.junit.* --dtrace-file IntMathTesterDriverAugmentedGPT51-m11.dtrace.gz testers.IntMathTesterDriverAugmentedGPT51 ../mutants/IntMathTesterDriverAugmentedGPT51-m11-objects.xml
+INFO:logger_4972490673075061607:Compiling mutant source /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/major_workspace/mutants/12/math/IntMath.java -> javac -cp /home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main:/home/inv/ebalestra/specvalid/libs/antlr-4.7.1-complete.jar:/home/inv/ebalestra/specvalid/libs/daikon.jar:/home/inv/ebalestra/specvalid/libs/junit-4.12.jar:/home/inv/ebalestra/specvalid/libs/FuzzSpecs.jar -g /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/major_workspace/mutants/12/math/IntMath.java -d /home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main
+INFO:logger_4972490673075061607:Running Chicory for mutant 12 -> java -cp /home/inv/ebalestra/specvalid/libs/antlr-4.7.1-complete.jar:/home/inv/ebalestra/specvalid/libs/daikon.jar:/home/inv/ebalestra/specvalid/libs/junit-4.12.jar:/home/inv/ebalestra/specvalid/libs/FuzzSpecs.jar:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/test daikon.Chicory --output-dir /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants --comparability-file /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/daikon/IntMathTesterDriverAugmentedGPT51.decls-DynComp --ppt-omit-pattern IntMathTesterDriverAugmentedGPT51.* --ppt-omit-pattern org.junit.* --dtrace-file IntMathTesterDriverAugmentedGPT51-m12.dtrace.gz testers.IntMathTesterDriverAugmentedGPT51 ../mutants/IntMathTesterDriverAugmentedGPT51-m12-objects.xml
+INFO:logger_4972490673075061607:Compiling mutant source /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/major_workspace/mutants/13/math/IntMath.java -> javac -cp /home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main:/home/inv/ebalestra/specvalid/libs/antlr-4.7.1-complete.jar:/home/inv/ebalestra/specvalid/libs/daikon.jar:/home/inv/ebalestra/specvalid/libs/junit-4.12.jar:/home/inv/ebalestra/specvalid/libs/FuzzSpecs.jar -g /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/major_workspace/mutants/13/math/IntMath.java -d /home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main
+INFO:logger_4972490673075061607:Running Chicory for mutant 13 -> java -cp /home/inv/ebalestra/specvalid/libs/antlr-4.7.1-complete.jar:/home/inv/ebalestra/specvalid/libs/daikon.jar:/home/inv/ebalestra/specvalid/libs/junit-4.12.jar:/home/inv/ebalestra/specvalid/libs/FuzzSpecs.jar:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/test daikon.Chicory --output-dir /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants --comparability-file /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/daikon/IntMathTesterDriverAugmentedGPT51.decls-DynComp --ppt-omit-pattern IntMathTesterDriverAugmentedGPT51.* --ppt-omit-pattern org.junit.* --dtrace-file IntMathTesterDriverAugmentedGPT51-m13.dtrace.gz testers.IntMathTesterDriverAugmentedGPT51 ../mutants/IntMathTesterDriverAugmentedGPT51-m13-objects.xml
+INFO:logger_4972490673075061607:Compiling mutant source /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/major_workspace/mutants/14/math/IntMath.java -> javac -cp /home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main:/home/inv/ebalestra/specvalid/libs/antlr-4.7.1-complete.jar:/home/inv/ebalestra/specvalid/libs/daikon.jar:/home/inv/ebalestra/specvalid/libs/junit-4.12.jar:/home/inv/ebalestra/specvalid/libs/FuzzSpecs.jar -g /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/major_workspace/mutants/14/math/IntMath.java -d /home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main
+INFO:logger_4972490673075061607:Running Chicory for mutant 14 -> java -cp /home/inv/ebalestra/specvalid/libs/antlr-4.7.1-complete.jar:/home/inv/ebalestra/specvalid/libs/daikon.jar:/home/inv/ebalestra/specvalid/libs/junit-4.12.jar:/home/inv/ebalestra/specvalid/libs/FuzzSpecs.jar:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/test daikon.Chicory --output-dir /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants --comparability-file /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/daikon/IntMathTesterDriverAugmentedGPT51.decls-DynComp --ppt-omit-pattern IntMathTesterDriverAugmentedGPT51.* --ppt-omit-pattern org.junit.* --dtrace-file IntMathTesterDriverAugmentedGPT51-m14.dtrace.gz testers.IntMathTesterDriverAugmentedGPT51 ../mutants/IntMathTesterDriverAugmentedGPT51-m14-objects.xml
+INFO:logger_4972490673075061607:Compiling mutant source /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/major_workspace/mutants/15/math/IntMath.java -> javac -cp /home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main:/home/inv/ebalestra/specvalid/libs/antlr-4.7.1-complete.jar:/home/inv/ebalestra/specvalid/libs/daikon.jar:/home/inv/ebalestra/specvalid/libs/junit-4.12.jar:/home/inv/ebalestra/specvalid/libs/FuzzSpecs.jar -g /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/major_workspace/mutants/15/math/IntMath.java -d /home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main
+INFO:logger_4972490673075061607:Running Chicory for mutant 15 -> java -cp /home/inv/ebalestra/specvalid/libs/antlr-4.7.1-complete.jar:/home/inv/ebalestra/specvalid/libs/daikon.jar:/home/inv/ebalestra/specvalid/libs/junit-4.12.jar:/home/inv/ebalestra/specvalid/libs/FuzzSpecs.jar:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/test daikon.Chicory --output-dir /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants --comparability-file /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/daikon/IntMathTesterDriverAugmentedGPT51.decls-DynComp --ppt-omit-pattern IntMathTesterDriverAugmentedGPT51.* --ppt-omit-pattern org.junit.* --dtrace-file IntMathTesterDriverAugmentedGPT51-m15.dtrace.gz testers.IntMathTesterDriverAugmentedGPT51 ../mutants/IntMathTesterDriverAugmentedGPT51-m15-objects.xml
+INFO:logger_4972490673075061607:Compiling mutant source /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/major_workspace/mutants/16/math/IntMath.java -> javac -cp /home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main:/home/inv/ebalestra/specvalid/libs/antlr-4.7.1-complete.jar:/home/inv/ebalestra/specvalid/libs/daikon.jar:/home/inv/ebalestra/specvalid/libs/junit-4.12.jar:/home/inv/ebalestra/specvalid/libs/FuzzSpecs.jar -g /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/major_workspace/mutants/16/math/IntMath.java -d /home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main
+INFO:logger_4972490673075061607:Running Chicory for mutant 16 -> java -cp /home/inv/ebalestra/specvalid/libs/antlr-4.7.1-complete.jar:/home/inv/ebalestra/specvalid/libs/daikon.jar:/home/inv/ebalestra/specvalid/libs/junit-4.12.jar:/home/inv/ebalestra/specvalid/libs/FuzzSpecs.jar:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/test daikon.Chicory --output-dir /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants --comparability-file /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/daikon/IntMathTesterDriverAugmentedGPT51.decls-DynComp --ppt-omit-pattern IntMathTesterDriverAugmentedGPT51.* --ppt-omit-pattern org.junit.* --dtrace-file IntMathTesterDriverAugmentedGPT51-m16.dtrace.gz testers.IntMathTesterDriverAugmentedGPT51 ../mutants/IntMathTesterDriverAugmentedGPT51-m16-objects.xml
+INFO:logger_4972490673075061607:Compiling mutant source /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/major_workspace/mutants/17/math/IntMath.java -> javac -cp /home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main:/home/inv/ebalestra/specvalid/libs/antlr-4.7.1-complete.jar:/home/inv/ebalestra/specvalid/libs/daikon.jar:/home/inv/ebalestra/specvalid/libs/junit-4.12.jar:/home/inv/ebalestra/specvalid/libs/FuzzSpecs.jar -g /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/major_workspace/mutants/17/math/IntMath.java -d /home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main
+INFO:logger_4972490673075061607:Running Chicory for mutant 17 -> java -cp /home/inv/ebalestra/specvalid/libs/antlr-4.7.1-complete.jar:/home/inv/ebalestra/specvalid/libs/daikon.jar:/home/inv/ebalestra/specvalid/libs/junit-4.12.jar:/home/inv/ebalestra/specvalid/libs/FuzzSpecs.jar:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/test daikon.Chicory --output-dir /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants --comparability-file /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/daikon/IntMathTesterDriverAugmentedGPT51.decls-DynComp --ppt-omit-pattern IntMathTesterDriverAugmentedGPT51.* --ppt-omit-pattern org.junit.* --dtrace-file IntMathTesterDriverAugmentedGPT51-m17.dtrace.gz testers.IntMathTesterDriverAugmentedGPT51 ../mutants/IntMathTesterDriverAugmentedGPT51-m17-objects.xml
+INFO:logger_4972490673075061607:Compiling mutant source /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/major_workspace/mutants/18/math/IntMath.java -> javac -cp /home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main:/home/inv/ebalestra/specvalid/libs/antlr-4.7.1-complete.jar:/home/inv/ebalestra/specvalid/libs/daikon.jar:/home/inv/ebalestra/specvalid/libs/junit-4.12.jar:/home/inv/ebalestra/specvalid/libs/FuzzSpecs.jar -g /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/major_workspace/mutants/18/math/IntMath.java -d /home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main
+INFO:logger_4972490673075061607:Running Chicory for mutant 18 -> java -cp /home/inv/ebalestra/specvalid/libs/antlr-4.7.1-complete.jar:/home/inv/ebalestra/specvalid/libs/daikon.jar:/home/inv/ebalestra/specvalid/libs/junit-4.12.jar:/home/inv/ebalestra/specvalid/libs/FuzzSpecs.jar:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/test daikon.Chicory --output-dir /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants --comparability-file /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/daikon/IntMathTesterDriverAugmentedGPT51.decls-DynComp --ppt-omit-pattern IntMathTesterDriverAugmentedGPT51.* --ppt-omit-pattern org.junit.* --dtrace-file IntMathTesterDriverAugmentedGPT51-m18.dtrace.gz testers.IntMathTesterDriverAugmentedGPT51 ../mutants/IntMathTesterDriverAugmentedGPT51-m18-objects.xml
+INFO:logger_4972490673075061607:Compiling mutant source /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/major_workspace/mutants/19/math/IntMath.java -> javac -cp /home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main:/home/inv/ebalestra/specvalid/libs/antlr-4.7.1-complete.jar:/home/inv/ebalestra/specvalid/libs/daikon.jar:/home/inv/ebalestra/specvalid/libs/junit-4.12.jar:/home/inv/ebalestra/specvalid/libs/FuzzSpecs.jar -g /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/major_workspace/mutants/19/math/IntMath.java -d /home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main
+INFO:logger_4972490673075061607:Running Chicory for mutant 19 -> java -cp /home/inv/ebalestra/specvalid/libs/antlr-4.7.1-complete.jar:/home/inv/ebalestra/specvalid/libs/daikon.jar:/home/inv/ebalestra/specvalid/libs/junit-4.12.jar:/home/inv/ebalestra/specvalid/libs/FuzzSpecs.jar:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/test daikon.Chicory --output-dir /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants --comparability-file /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/daikon/IntMathTesterDriverAugmentedGPT51.decls-DynComp --ppt-omit-pattern IntMathTesterDriverAugmentedGPT51.* --ppt-omit-pattern org.junit.* --dtrace-file IntMathTesterDriverAugmentedGPT51-m19.dtrace.gz testers.IntMathTesterDriverAugmentedGPT51 ../mutants/IntMathTesterDriverAugmentedGPT51-m19-objects.xml
+INFO:logger_4972490673075061607:Compiling mutant source /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/major_workspace/mutants/2/math/IntMath.java -> javac -cp /home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main:/home/inv/ebalestra/specvalid/libs/antlr-4.7.1-complete.jar:/home/inv/ebalestra/specvalid/libs/daikon.jar:/home/inv/ebalestra/specvalid/libs/junit-4.12.jar:/home/inv/ebalestra/specvalid/libs/FuzzSpecs.jar -g /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/major_workspace/mutants/2/math/IntMath.java -d /home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main
+INFO:logger_4972490673075061607:Running Chicory for mutant 2 -> java -cp /home/inv/ebalestra/specvalid/libs/antlr-4.7.1-complete.jar:/home/inv/ebalestra/specvalid/libs/daikon.jar:/home/inv/ebalestra/specvalid/libs/junit-4.12.jar:/home/inv/ebalestra/specvalid/libs/FuzzSpecs.jar:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/test daikon.Chicory --output-dir /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants --comparability-file /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/daikon/IntMathTesterDriverAugmentedGPT51.decls-DynComp --ppt-omit-pattern IntMathTesterDriverAugmentedGPT51.* --ppt-omit-pattern org.junit.* --dtrace-file IntMathTesterDriverAugmentedGPT51-m2.dtrace.gz testers.IntMathTesterDriverAugmentedGPT51 ../mutants/IntMathTesterDriverAugmentedGPT51-m2-objects.xml
+INFO:logger_4972490673075061607:Compiling mutant source /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/major_workspace/mutants/20/math/IntMath.java -> javac -cp /home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main:/home/inv/ebalestra/specvalid/libs/antlr-4.7.1-complete.jar:/home/inv/ebalestra/specvalid/libs/daikon.jar:/home/inv/ebalestra/specvalid/libs/junit-4.12.jar:/home/inv/ebalestra/specvalid/libs/FuzzSpecs.jar -g /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/major_workspace/mutants/20/math/IntMath.java -d /home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main
+INFO:logger_4972490673075061607:Running Chicory for mutant 20 -> java -cp /home/inv/ebalestra/specvalid/libs/antlr-4.7.1-complete.jar:/home/inv/ebalestra/specvalid/libs/daikon.jar:/home/inv/ebalestra/specvalid/libs/junit-4.12.jar:/home/inv/ebalestra/specvalid/libs/FuzzSpecs.jar:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/test daikon.Chicory --output-dir /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants --comparability-file /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/daikon/IntMathTesterDriverAugmentedGPT51.decls-DynComp --ppt-omit-pattern IntMathTesterDriverAugmentedGPT51.* --ppt-omit-pattern org.junit.* --dtrace-file IntMathTesterDriverAugmentedGPT51-m20.dtrace.gz testers.IntMathTesterDriverAugmentedGPT51 ../mutants/IntMathTesterDriverAugmentedGPT51-m20-objects.xml
+INFO:logger_4972490673075061607:Chicory error for mutant 20: Command failed (Running Chicory for mutant 20): Command '['java', '-cp', '/home/inv/ebalestra/specvalid/libs/antlr-4.7.1-complete.jar:/home/inv/ebalestra/specvalid/libs/daikon.jar:/home/inv/ebalestra/specvalid/libs/junit-4.12.jar:/home/inv/ebalestra/specvalid/libs/FuzzSpecs.jar:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/test', 'daikon.Chicory', '--output-dir', '/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants', '--comparability-file', '/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/daikon/IntMathTesterDriverAugmentedGPT51.decls-DynComp', '--ppt-omit-pattern', 'IntMathTesterDriverAugmentedGPT51.*', '--ppt-omit-pattern', 'org.junit.*', '--dtrace-file', 'IntMathTesterDriverAugmentedGPT51-m20.dtrace.gz', 'testers.IntMathTesterDriverAugmentedGPT51', '../mutants/IntMathTesterDriverAugmentedGPT51-m20-objects.xml']' returned non-zero exit status 1.
+INFO:logger_4972490673075061607:Compiling mutant source /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/major_workspace/mutants/21/math/IntMath.java -> javac -cp /home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main:/home/inv/ebalestra/specvalid/libs/antlr-4.7.1-complete.jar:/home/inv/ebalestra/specvalid/libs/daikon.jar:/home/inv/ebalestra/specvalid/libs/junit-4.12.jar:/home/inv/ebalestra/specvalid/libs/FuzzSpecs.jar -g /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/major_workspace/mutants/21/math/IntMath.java -d /home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main
+INFO:logger_4972490673075061607:Running Chicory for mutant 21 -> java -cp /home/inv/ebalestra/specvalid/libs/antlr-4.7.1-complete.jar:/home/inv/ebalestra/specvalid/libs/daikon.jar:/home/inv/ebalestra/specvalid/libs/junit-4.12.jar:/home/inv/ebalestra/specvalid/libs/FuzzSpecs.jar:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/test daikon.Chicory --output-dir /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants --comparability-file /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/daikon/IntMathTesterDriverAugmentedGPT51.decls-DynComp --ppt-omit-pattern IntMathTesterDriverAugmentedGPT51.* --ppt-omit-pattern org.junit.* --dtrace-file IntMathTesterDriverAugmentedGPT51-m21.dtrace.gz testers.IntMathTesterDriverAugmentedGPT51 ../mutants/IntMathTesterDriverAugmentedGPT51-m21-objects.xml
+INFO:logger_4972490673075061607:Compiling mutant source /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/major_workspace/mutants/3/math/IntMath.java -> javac -cp /home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main:/home/inv/ebalestra/specvalid/libs/antlr-4.7.1-complete.jar:/home/inv/ebalestra/specvalid/libs/daikon.jar:/home/inv/ebalestra/specvalid/libs/junit-4.12.jar:/home/inv/ebalestra/specvalid/libs/FuzzSpecs.jar -g /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/major_workspace/mutants/3/math/IntMath.java -d /home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main
+INFO:logger_4972490673075061607:Running Chicory for mutant 3 -> java -cp /home/inv/ebalestra/specvalid/libs/antlr-4.7.1-complete.jar:/home/inv/ebalestra/specvalid/libs/daikon.jar:/home/inv/ebalestra/specvalid/libs/junit-4.12.jar:/home/inv/ebalestra/specvalid/libs/FuzzSpecs.jar:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/test daikon.Chicory --output-dir /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants --comparability-file /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/daikon/IntMathTesterDriverAugmentedGPT51.decls-DynComp --ppt-omit-pattern IntMathTesterDriverAugmentedGPT51.* --ppt-omit-pattern org.junit.* --dtrace-file IntMathTesterDriverAugmentedGPT51-m3.dtrace.gz testers.IntMathTesterDriverAugmentedGPT51 ../mutants/IntMathTesterDriverAugmentedGPT51-m3-objects.xml
+INFO:logger_4972490673075061607:Compiling mutant source /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/major_workspace/mutants/4/math/IntMath.java -> javac -cp /home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main:/home/inv/ebalestra/specvalid/libs/antlr-4.7.1-complete.jar:/home/inv/ebalestra/specvalid/libs/daikon.jar:/home/inv/ebalestra/specvalid/libs/junit-4.12.jar:/home/inv/ebalestra/specvalid/libs/FuzzSpecs.jar -g /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/major_workspace/mutants/4/math/IntMath.java -d /home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main
+INFO:logger_4972490673075061607:Running Chicory for mutant 4 -> java -cp /home/inv/ebalestra/specvalid/libs/antlr-4.7.1-complete.jar:/home/inv/ebalestra/specvalid/libs/daikon.jar:/home/inv/ebalestra/specvalid/libs/junit-4.12.jar:/home/inv/ebalestra/specvalid/libs/FuzzSpecs.jar:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/test daikon.Chicory --output-dir /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants --comparability-file /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/daikon/IntMathTesterDriverAugmentedGPT51.decls-DynComp --ppt-omit-pattern IntMathTesterDriverAugmentedGPT51.* --ppt-omit-pattern org.junit.* --dtrace-file IntMathTesterDriverAugmentedGPT51-m4.dtrace.gz testers.IntMathTesterDriverAugmentedGPT51 ../mutants/IntMathTesterDriverAugmentedGPT51-m4-objects.xml
+INFO:logger_4972490673075061607:Chicory error for mutant 4: Command failed (Running Chicory for mutant 4): Command '['java', '-cp', '/home/inv/ebalestra/specvalid/libs/antlr-4.7.1-complete.jar:/home/inv/ebalestra/specvalid/libs/daikon.jar:/home/inv/ebalestra/specvalid/libs/junit-4.12.jar:/home/inv/ebalestra/specvalid/libs/FuzzSpecs.jar:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/test', 'daikon.Chicory', '--output-dir', '/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants', '--comparability-file', '/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/daikon/IntMathTesterDriverAugmentedGPT51.decls-DynComp', '--ppt-omit-pattern', 'IntMathTesterDriverAugmentedGPT51.*', '--ppt-omit-pattern', 'org.junit.*', '--dtrace-file', 'IntMathTesterDriverAugmentedGPT51-m4.dtrace.gz', 'testers.IntMathTesterDriverAugmentedGPT51', '../mutants/IntMathTesterDriverAugmentedGPT51-m4-objects.xml']' returned non-zero exit status 1.
+INFO:logger_4972490673075061607:Compiling mutant source /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/major_workspace/mutants/5/math/IntMath.java -> javac -cp /home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main:/home/inv/ebalestra/specvalid/libs/antlr-4.7.1-complete.jar:/home/inv/ebalestra/specvalid/libs/daikon.jar:/home/inv/ebalestra/specvalid/libs/junit-4.12.jar:/home/inv/ebalestra/specvalid/libs/FuzzSpecs.jar -g /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/major_workspace/mutants/5/math/IntMath.java -d /home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main
+INFO:logger_4972490673075061607:Running Chicory for mutant 5 -> java -cp /home/inv/ebalestra/specvalid/libs/antlr-4.7.1-complete.jar:/home/inv/ebalestra/specvalid/libs/daikon.jar:/home/inv/ebalestra/specvalid/libs/junit-4.12.jar:/home/inv/ebalestra/specvalid/libs/FuzzSpecs.jar:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/test daikon.Chicory --output-dir /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants --comparability-file /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/daikon/IntMathTesterDriverAugmentedGPT51.decls-DynComp --ppt-omit-pattern IntMathTesterDriverAugmentedGPT51.* --ppt-omit-pattern org.junit.* --dtrace-file IntMathTesterDriverAugmentedGPT51-m5.dtrace.gz testers.IntMathTesterDriverAugmentedGPT51 ../mutants/IntMathTesterDriverAugmentedGPT51-m5-objects.xml
+INFO:logger_4972490673075061607:Chicory error for mutant 5: Command failed (Running Chicory for mutant 5): Command '['java', '-cp', '/home/inv/ebalestra/specvalid/libs/antlr-4.7.1-complete.jar:/home/inv/ebalestra/specvalid/libs/daikon.jar:/home/inv/ebalestra/specvalid/libs/junit-4.12.jar:/home/inv/ebalestra/specvalid/libs/FuzzSpecs.jar:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/test', 'daikon.Chicory', '--output-dir', '/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants', '--comparability-file', '/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/daikon/IntMathTesterDriverAugmentedGPT51.decls-DynComp', '--ppt-omit-pattern', 'IntMathTesterDriverAugmentedGPT51.*', '--ppt-omit-pattern', 'org.junit.*', '--dtrace-file', 'IntMathTesterDriverAugmentedGPT51-m5.dtrace.gz', 'testers.IntMathTesterDriverAugmentedGPT51', '../mutants/IntMathTesterDriverAugmentedGPT51-m5-objects.xml']' returned non-zero exit status 1.
+INFO:logger_4972490673075061607:Compiling mutant source /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/major_workspace/mutants/6/math/IntMath.java -> javac -cp /home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main:/home/inv/ebalestra/specvalid/libs/antlr-4.7.1-complete.jar:/home/inv/ebalestra/specvalid/libs/daikon.jar:/home/inv/ebalestra/specvalid/libs/junit-4.12.jar:/home/inv/ebalestra/specvalid/libs/FuzzSpecs.jar -g /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/major_workspace/mutants/6/math/IntMath.java -d /home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main
+INFO:logger_4972490673075061607:Running Chicory for mutant 6 -> java -cp /home/inv/ebalestra/specvalid/libs/antlr-4.7.1-complete.jar:/home/inv/ebalestra/specvalid/libs/daikon.jar:/home/inv/ebalestra/specvalid/libs/junit-4.12.jar:/home/inv/ebalestra/specvalid/libs/FuzzSpecs.jar:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/test daikon.Chicory --output-dir /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants --comparability-file /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/daikon/IntMathTesterDriverAugmentedGPT51.decls-DynComp --ppt-omit-pattern IntMathTesterDriverAugmentedGPT51.* --ppt-omit-pattern org.junit.* --dtrace-file IntMathTesterDriverAugmentedGPT51-m6.dtrace.gz testers.IntMathTesterDriverAugmentedGPT51 ../mutants/IntMathTesterDriverAugmentedGPT51-m6-objects.xml
+INFO:logger_4972490673075061607:Compiling mutant source /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/major_workspace/mutants/7/math/IntMath.java -> javac -cp /home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main:/home/inv/ebalestra/specvalid/libs/antlr-4.7.1-complete.jar:/home/inv/ebalestra/specvalid/libs/daikon.jar:/home/inv/ebalestra/specvalid/libs/junit-4.12.jar:/home/inv/ebalestra/specvalid/libs/FuzzSpecs.jar -g /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/major_workspace/mutants/7/math/IntMath.java -d /home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main
+INFO:logger_4972490673075061607:Running Chicory for mutant 7 -> java -cp /home/inv/ebalestra/specvalid/libs/antlr-4.7.1-complete.jar:/home/inv/ebalestra/specvalid/libs/daikon.jar:/home/inv/ebalestra/specvalid/libs/junit-4.12.jar:/home/inv/ebalestra/specvalid/libs/FuzzSpecs.jar:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/test daikon.Chicory --output-dir /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants --comparability-file /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/daikon/IntMathTesterDriverAugmentedGPT51.decls-DynComp --ppt-omit-pattern IntMathTesterDriverAugmentedGPT51.* --ppt-omit-pattern org.junit.* --dtrace-file IntMathTesterDriverAugmentedGPT51-m7.dtrace.gz testers.IntMathTesterDriverAugmentedGPT51 ../mutants/IntMathTesterDriverAugmentedGPT51-m7-objects.xml
+INFO:logger_4972490673075061607:Compiling mutant source /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/major_workspace/mutants/8/math/IntMath.java -> javac -cp /home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main:/home/inv/ebalestra/specvalid/libs/antlr-4.7.1-complete.jar:/home/inv/ebalestra/specvalid/libs/daikon.jar:/home/inv/ebalestra/specvalid/libs/junit-4.12.jar:/home/inv/ebalestra/specvalid/libs/FuzzSpecs.jar -g /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/major_workspace/mutants/8/math/IntMath.java -d /home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main
+INFO:logger_4972490673075061607:Running Chicory for mutant 8 -> java -cp /home/inv/ebalestra/specvalid/libs/antlr-4.7.1-complete.jar:/home/inv/ebalestra/specvalid/libs/daikon.jar:/home/inv/ebalestra/specvalid/libs/junit-4.12.jar:/home/inv/ebalestra/specvalid/libs/FuzzSpecs.jar:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/test daikon.Chicory --output-dir /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants --comparability-file /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/daikon/IntMathTesterDriverAugmentedGPT51.decls-DynComp --ppt-omit-pattern IntMathTesterDriverAugmentedGPT51.* --ppt-omit-pattern org.junit.* --dtrace-file IntMathTesterDriverAugmentedGPT51-m8.dtrace.gz testers.IntMathTesterDriverAugmentedGPT51 ../mutants/IntMathTesterDriverAugmentedGPT51-m8-objects.xml
+INFO:logger_4972490673075061607:Compiling mutant source /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/major_workspace/mutants/9/math/IntMath.java -> javac -cp /home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main:/home/inv/ebalestra/specvalid/libs/antlr-4.7.1-complete.jar:/home/inv/ebalestra/specvalid/libs/daikon.jar:/home/inv/ebalestra/specvalid/libs/junit-4.12.jar:/home/inv/ebalestra/specvalid/libs/FuzzSpecs.jar -g /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/major_workspace/mutants/9/math/IntMath.java -d /home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main
+INFO:logger_4972490673075061607:Running Chicory for mutant 9 -> java -cp /home/inv/ebalestra/specvalid/libs/antlr-4.7.1-complete.jar:/home/inv/ebalestra/specvalid/libs/daikon.jar:/home/inv/ebalestra/specvalid/libs/junit-4.12.jar:/home/inv/ebalestra/specvalid/libs/FuzzSpecs.jar:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/test daikon.Chicory --output-dir /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants --comparability-file /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/daikon/IntMathTesterDriverAugmentedGPT51.decls-DynComp --ppt-omit-pattern IntMathTesterDriverAugmentedGPT51.* --ppt-omit-pattern org.junit.* --dtrace-file IntMathTesterDriverAugmentedGPT51-m9.dtrace.gz testers.IntMathTesterDriverAugmentedGPT51 ../mutants/IntMathTesterDriverAugmentedGPT51-m9-objects.xml
+INFO:logger_4972490673075061607:Generated Chicory traces for 21 mutants. Output: /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants
+INFO:logger_4972490673075061607:Mutant traces ready at /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants (21 entries)
+INFO:logger_4972490673075061607:Processing mutant 1: 1:LVR:0:POS:math.IntMath@mod(int,int):39:0 |==> 1
+INFO:logger_4972490673075061607:InvariantChecker on mutant trace /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m1.dtrace.gz
+INFO:logger_4972490673075061607:Processing mutant 10: 10:LVR:0:POS:math.IntMath@mod(int,int):46:0 |==> 1
+INFO:logger_4972490673075061607:InvariantChecker on mutant trace /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m10.dtrace.gz
+INFO:logger_4972490673075061607:Processing mutant 11: 11:LVR:0:NEG:math.IntMath@mod(int,int):46:0 |==> -1
+INFO:logger_4972490673075061607:InvariantChecker on mutant trace /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m11.dtrace.gz
+INFO:logger_4972490673075061607:Processing mutant 12: 12:ROR:>=(int,int):==(int,int):math.IntMath@mod(int,int):46:result1 >= 0 |==> result1 == 0
+INFO:logger_4972490673075061607:InvariantChecker on mutant trace /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m12.dtrace.gz
+INFO:logger_4972490673075061607:Processing mutant 13: 13:ROR:>=(int,int):>(int,int):math.IntMath@mod(int,int):46:result1 >= 0 |==> result1 > 0
+INFO:logger_4972490673075061607:InvariantChecker on mutant trace /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m13.dtrace.gz
+INFO:logger_4972490673075061607:Processing mutant 14: 14:ROR:>=(int,int):TRUE(int,int):math.IntMath@mod(int,int):46:result1 >= 0 |==> true
+INFO:logger_4972490673075061607:InvariantChecker on mutant trace /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m14.dtrace.gz
+INFO:logger_4972490673075061607:Processing mutant 15: 15:EVR:<IDENTIFIER(int)>:<DEFAULT>:math.IntMath@mod(int,int):47:result1 |==> 0
+INFO:logger_4972490673075061607:InvariantChecker on mutant trace /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m15.dtrace.gz
+INFO:logger_4972490673075061607:Processing mutant 16: 16:AOR:+(int,int):%(int,int):math.IntMath@mod(int,int):49:result1 + m |==> result1 % m
+INFO:logger_4972490673075061607:InvariantChecker on mutant trace /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m16.dtrace.gz
+INFO:logger_4972490673075061607:Processing mutant 17: 17:AOR:+(int,int):*(int,int):math.IntMath@mod(int,int):49:result1 + m |==> result1 * m
+INFO:logger_4972490673075061607:InvariantChecker on mutant trace /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m17.dtrace.gz
+INFO:logger_4972490673075061607:Processing mutant 18: 18:AOR:+(int,int):-(int,int):math.IntMath@mod(int,int):49:result1 + m |==> result1 - m
+INFO:logger_4972490673075061607:InvariantChecker on mutant trace /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m18.dtrace.gz
+INFO:logger_4972490673075061607:Processing mutant 19: 19:AOR:+(int,int):/(int,int):math.IntMath@mod(int,int):49:result1 + m |==> result1 / m
+INFO:logger_4972490673075061607:InvariantChecker on mutant trace /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m19.dtrace.gz
+INFO:logger_4972490673075061607:Processing mutant 2: 2:LVR:0:NEG:math.IntMath@mod(int,int):39:0 |==> -1
+INFO:logger_4972490673075061607:InvariantChecker on mutant trace /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m2.dtrace.gz
+INFO:logger_4972490673075061607:Processing mutant 20: 20:LVR:TRUE:FALSE:math.IntMath@mod(int,int):52:true |==> false
+INFO:logger_4972490673075061607:InvariantChecker on mutant trace /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m20.dtrace.gz
+WARNING:logger_4972490673075061607:InvariantChecker failed for IntMathTesterDriverAugmentedGPT51-m20.dtrace.gz: Command '['java', '-Xmx8g', '-cp', '/home/inv/ebalestra/specvalid/libs/antlr-4.7.1-complete.jar:/home/inv/ebalestra/specvalid/libs/daikon.jar:/home/inv/ebalestra/specvalid/libs/junit-4.12.jar:/home/inv/ebalestra/specvalid/libs/FuzzSpecs.jar:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/main:/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/IntMath_mod/build/classes/java/test', 'daikon.tools.InvariantChecker', '--conf', '--serialiazed-objects', 'setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m20-objects.xml', '/home/inv/ebalestra/specvalid/experiments/specfuzzer-subject-results/IntMath_mod/output/IntMath-mod-specfuzzer-1.inv.gz', 'setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m20.dtrace.gz']' returned non-zero exit status 1.
+INFO:logger_4972490673075061607:Processing mutant 21: 21:EVR:<IDENTIFIER(int)>:<DEFAULT>:math.IntMath@mod(int,int):53:result |==> 0
+INFO:logger_4972490673075061607:InvariantChecker on mutant trace /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m21.dtrace.gz
+INFO:logger_4972490673075061607:Processing mutant 3: 3:ROR:<=(int,int):<(int,int):math.IntMath@mod(int,int):39:m <= 0 |==> m < 0
+INFO:logger_4972490673075061607:InvariantChecker on mutant trace /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m3.dtrace.gz
+INFO:logger_4972490673075061607:Processing mutant 4: 4:ROR:<=(int,int):==(int,int):math.IntMath@mod(int,int):39:m <= 0 |==> m == 0
+INFO:logger_4972490673075061607:InvariantChecker on mutant trace /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m4.dtrace.gz
+INFO:logger_4972490673075061607:Processing mutant 5: 5:ROR:<=(int,int):TRUE(int,int):math.IntMath@mod(int,int):39:m <= 0 |==> true
+INFO:logger_4972490673075061607:InvariantChecker on mutant trace /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m5.dtrace.gz
+INFO:logger_4972490673075061607:Processing mutant 6: 6:AOR:%(int,int):*(int,int):math.IntMath@mod(int,int):44:x % m |==> x * m
+INFO:logger_4972490673075061607:InvariantChecker on mutant trace /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m6.dtrace.gz
+INFO:logger_4972490673075061607:Processing mutant 7: 7:AOR:%(int,int):+(int,int):math.IntMath@mod(int,int):44:x % m |==> x + m
+INFO:logger_4972490673075061607:InvariantChecker on mutant trace /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m7.dtrace.gz
+INFO:logger_4972490673075061607:Processing mutant 8: 8:AOR:%(int,int):-(int,int):math.IntMath@mod(int,int):44:x % m |==> x - m
+INFO:logger_4972490673075061607:InvariantChecker on mutant trace /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m8.dtrace.gz
+INFO:logger_4972490673075061607:Processing mutant 9: 9:AOR:%(int,int):/(int,int):math.IntMath@mod(int,int):44:x % m |==> x / m
+INFO:logger_4972490673075061607:InvariantChecker on mutant trace /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m9.dtrace.gz
+INFO:logger_4972490673075061607:Processed 20 mutants for model GPT51 in 3657.0s
+INFO:logger_4972490673075061607:Mutation killing ability results saved in: /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/IntMath-mod-GPT51-specvalid-invs-by-mutants.csv
+INFO:logger_4972490673075061607:Writing assertions to file: /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/IntMath-mod-GPT51-specvalid.assertions
+INFO:logger_4972490673075061607:✓ Assertions file generated with 329 lines
+INFO:logger_4972490673075061607:✓ Copied inv.gz to /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/IntMath-mod-GPT51-specvalid.inv.gz
+INFO:logger_4972490673075061607:Running buckets-filter.py: python3 /home/inv/ebalestra/specvalid/scripts/buckets-filter.py /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/IntMath-mod-GPT51-specvalid-invs-by-mutants.csv /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/IntMath-mod-GPT51-specvalid.assertion IntMath mod
+INFO:logger_4972490673075061607:buckets-filter.py output:
+> Mutant filter from file: /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/IntMath-mod-GPT51-specvalid-invs-by-mutants.csv
+Unique mutants: 19
+Loading assertions from: /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/IntMath-mod-GPT51-specvalid.assertion
+Specs killing mutants: 234
+
+> Minimizing by exploring the bit vector of each spec
+Building bit vectors of size: 19
+Building buckets
+=====================================
+Buckets: 51
+Vector: [1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m1.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m10.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m11.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m12.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m13.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m14.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m15.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m16.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m17.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m18.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m19.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m2.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m21.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m3.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m4.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m6.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m7.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m8.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m9.dtrace.gz
+Specs:
+	FuzzedInvariant ( (Integer_Variable_0 = -1) implies (Integer_Variable_1 > 1) ) holds for: <orig(x), return> l:  107  - Fails:  4848 Quality:  4850
+Picked:
+	FuzzedInvariant ( (Integer_Variable_0 = -1) implies (Integer_Variable_1 > 1) ) holds for: <orig(x), return>
+
+Vector: [0. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 0. 1.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m10.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m11.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m12.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m13.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m14.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m15.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m16.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m17.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m18.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m19.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m2.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m21.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m3.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m4.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m6.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m7.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m9.dtrace.gz
+Specs:
+	FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 + -1 ) holds for: <orig(x), return> l:  94  - Fails:  2996 Quality:  2998
+	FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 - 1 ) holds for: <orig(x), return> l:  93  - Fails:  2996 Quality:  2998
+Picked:
+	FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 + -1 ) holds for: <orig(x), return>
+
+Vector: [0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 1. 0. 0.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m10.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m13.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m7.dtrace.gz
+Specs:
+	FuzzedInvariant ( (Integer_Variable_0 <= 0) implies (Integer_Variable_1 != Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  136  - Fails:  2064 Quality:  2067
+	FuzzedInvariant ( (Integer_Variable_0 >= 1) or (Integer_Variable_1 != Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  131  - Fails:  2064 Quality:  2067
+	FuzzedInvariant ( (Integer_Variable_0 != 0) or (Integer_Variable_1 != Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  131  - Fails:  1884 Quality:  1887
+	FuzzedInvariant ( (Integer_Variable_0 != 0) or (Integer_Variable_1 < 1) ) holds for: <orig(x), return> l:  102  - Fails:  1884 Quality:  1886
+Picked:
+	FuzzedInvariant ( (Integer_Variable_0 <= 0) implies (Integer_Variable_1 != Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return>
+
+Vector: [0. 1. 0. 1. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 1. 1. 1. 1. 1.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m10.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m12.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m13.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m4.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m6.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m7.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m8.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m9.dtrace.gz
+Specs:
+	FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 + 1 ) holds for: <orig(m), return> l:  93  - Fails:  6790 Quality:  6792
+	FuzzedInvariant ( Integer_Variable_0 > Integer_Variable_1 / 1 ) holds for: <orig(m), return> l:  92  - Fails:  6790 Quality:  6792
+	FuzzedInvariant ( Integer_Variable_0 > Integer_Variable_1 ) holds for: <orig(m), return> l:  88  - Fails:  6790 Quality:  6792
+	FuzzedInvariant ( Integer_Variable_0 > Integer_Variable_1 - 0 ) holds for: <orig(m), return> l:  92  - Fails:  6790 Quality:  6792
+	FuzzedInvariant ( (Integer_Variable_0 > Integer_Variable_1) or (Integer_Variable_1 = -1) ) holds for: <orig(m), return> l:  119  - Fails:  6790 Quality:  6792
+	FuzzedInvariant ( (Integer_Variable_0 > Integer_Variable_1) or (Integer_Variable_1 <= -1) ) holds for: <orig(m), return> l:  120  - Fails:  6790 Quality:  6792
+	FuzzedInvariant ( Integer_Variable_0 > Integer_Variable_1 + 0 ) holds for: <orig(m), return> l:  92  - Fails:  6790 Quality:  6792
+	FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 - -1 ) holds for: <orig(m), return> l:  94  - Fails:  6790 Quality:  6792
+	FuzzedInvariant ( Integer_Variable_0 > Integer_Variable_1 * 1 ) holds for: <orig(m), return> l:  92  - Fails:  6790 Quality:  6792
+	\result < \old(m) l:  17  - Fails:  6790 Quality:  6790
+	FuzzedInvariant ( (Integer_Variable_0 <= Integer_Variable_1) implies (Integer_Variable_1 < 1) ) holds for: <orig(m), return> l:  124  - Fails:  6706 Quality:  6708
+	FuzzedInvariant ( (Integer_Variable_0 <= Integer_Variable_1) implies (Integer_Variable_1 <= 0) ) holds for: <orig(m), return> l:  125  - Fails:  6706 Quality:  6708
+	FuzzedInvariant ( (Integer_Variable_0 > Integer_Variable_1) or (Integer_Variable_1 <= 0) ) holds for: <orig(m), return> l:  119  - Fails:  6706 Quality:  6708
+	FuzzedInvariant ( (Integer_Variable_0 >= -1) implies (Integer_Variable_1 > Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  136  - Fails:  6602 Quality:  6605
+	FuzzedInvariant ( (Integer_Variable_0 > -1) implies (Integer_Variable_1 > Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  135  - Fails:  6592 Quality:  6595
+	FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) or (Integer_Variable_1 > Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  146  - Fails:  6344 Quality:  6347
+	FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) implies (Integer_Variable_1 > Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  152  - Fails:  6344 Quality:  6347
+	FuzzedInvariant ( (Integer_Variable_0 > Integer_Variable_1) or (Integer_Variable_1 <= 1) ) holds for: <orig(m), return> l:  119  - Fails:  5512 Quality:  5514
+	FuzzedInvariant ( (Integer_Variable_0 > 1) implies (Integer_Variable_1 > Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  134  - Fails:  4438 Quality:  4441
+	FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) implies (Integer_Variable_1 > Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  152  - Fails:  2972 Quality:  2975
+	FuzzedInvariant ( (Integer_Variable_0 > Integer_Variable_1) implies (Integer_Variable_1 > Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  151  - Fails:  2526 Quality:  2529
+Picked:
+	FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 + 1 ) holds for: <orig(m), return>
+
+Vector: [0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 1. 1. 1. 1.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m10.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m13.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m6.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m7.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m8.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m9.dtrace.gz
+Specs:
+	FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 - 0 ) holds for: <orig(m), return> l:  93  - Fails:  2822 Quality:  2824
+	FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) or (Integer_Variable_1 < -1) ) holds for: <orig(m), return> l:  120  - Fails:  2822 Quality:  2824
+	FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 * 1 ) holds for: <orig(m), return> l:  93  - Fails:  2822 Quality:  2824
+	FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) implies (Integer_Variable_1 <= 0) ) holds for: <orig(m), return> l:  124  - Fails:  2822 Quality:  2824
+	FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 / 1 ) holds for: <orig(m), return> l:  93  - Fails:  2822 Quality:  2824
+	FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) or (Integer_Variable_1 = 0) ) holds for: <orig(m), return> l:  119  - Fails:  2822 Quality:  2824
+	FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) implies (Integer_Variable_1 = 0) ) holds for: <orig(m), return> l:  123  - Fails:  2822 Quality:  2824
+	FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) or (Integer_Variable_1 <= 0) ) holds for: <orig(m), return> l:  120  - Fails:  2822 Quality:  2824
+	FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 + 0 ) holds for: <orig(m), return> l:  93  - Fails:  2822 Quality:  2824
+	FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 ) holds for: <orig(m), return> l:  89  - Fails:  2822 Quality:  2824
+	FuzzedInvariant ( (Integer_Variable_0 = -1) or (Integer_Variable_1 != Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  131  - Fails:  2814 Quality:  2817
+	FuzzedInvariant ( (Integer_Variable_0 >= -1) implies (Integer_Variable_1 != Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  137  - Fails:  2650 Quality:  2653
+	FuzzedInvariant ( (Integer_Variable_0 <= -1) or (Integer_Variable_1 != Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  132  - Fails:  2642 Quality:  2645
+	FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) or (Integer_Variable_1 != Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  147  - Fails:  2598 Quality:  2601
+	FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) implies (Integer_Variable_1 != Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  153  - Fails:  2598 Quality:  2601
+	FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) implies (Integer_Variable_1 <= 1) ) holds for: <orig(m), return> l:  124  - Fails:  1644 Quality:  1646
+	FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) or (Integer_Variable_1 = 1) ) holds for: <orig(m), return> l:  119  - Fails:  1644 Quality:  1646
+	FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) or (Integer_Variable_1 <= 1) ) holds for: <orig(m), return> l:  120  - Fails:  1644 Quality:  1646
+Picked:
+	FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 - 0 ) holds for: <orig(m), return>
+
+Vector: [0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 1. 1. 0. 1.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m10.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m13.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m6.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m7.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m9.dtrace.gz
+Specs:
+	FuzzedInvariant ( (Integer_Variable_0 <= Integer_Variable_1) implies (Integer_Variable_1 != Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  153  - Fails:  2364 Quality:  2367
+	FuzzedInvariant ( (Integer_Variable_0 > Integer_Variable_1) or (Integer_Variable_1 != Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  147  - Fails:  2364 Quality:  2367
+	FuzzedInvariant ( (Integer_Variable_0 > 1) or (Integer_Variable_1 != Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  130  - Fails:  2148 Quality:  2151
+	FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) implies (Integer_Variable_1 != 1) ) holds for: <orig(m), return> l:  124  - Fails:  1178 Quality:  1180
+Picked:
+	FuzzedInvariant ( (Integer_Variable_0 <= Integer_Variable_1) implies (Integer_Variable_1 != Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return>
+
+Vector: [0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 1. 1. 1. 0. 1.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m10.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m13.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m4.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m6.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m7.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m9.dtrace.gz
+Specs:
+	FuzzedInvariant ( (Integer_Variable_0 > Integer_Variable_1) or (Integer_Variable_1 > 1) ) holds for: <orig(m), return> l:  118  - Fails:  1278 Quality:  1280
+	FuzzedInvariant ( (Integer_Variable_0 > 1) or (Integer_Variable_1 != 1) ) holds for: <orig(m), return> l:  102  - Fails:  1194 Quality:  1196
+	FuzzedInvariant ( (Integer_Variable_0 <= Integer_Variable_1) implies (Integer_Variable_1 != 1) ) holds for: <orig(m), return> l:  125  - Fails:  1194 Quality:  1196
+	FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) or (Integer_Variable_1 > Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  147  - Fails:  446 Quality:  449
+	FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) implies (Integer_Variable_1 > Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  151  - Fails:  446 Quality:  449
+Picked:
+	FuzzedInvariant ( (Integer_Variable_0 > Integer_Variable_1) or (Integer_Variable_1 > 1) ) holds for: <orig(m), return>
+
+Vector: [0. 1. 1. 0. 1. 1. 0. 1. 1. 1. 0. 0. 0. 0. 1. 1. 1. 1. 1.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m10.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m11.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m13.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m14.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m16.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m17.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m18.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m4.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m6.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m7.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m8.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m9.dtrace.gz
+Specs:
+	FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) iff (Integer_Variable_1 <= -1) ) holds for: <orig(m), return> l:  121  - Fails:  10434 Quality:  10436
+	FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) xor (Integer_Variable_1 <= -1) ) holds for: <orig(m), return> l:  122  - Fails:  10434 Quality:  10436
+Picked:
+	FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) iff (Integer_Variable_1 <= -1) ) holds for: <orig(m), return>
+
+Vector: [0. 1. 1. 0. 1. 1. 0. 1. 0. 0. 0. 0. 0. 0. 0. 1. 1. 1. 1.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m10.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m11.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m13.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m14.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m16.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m6.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m7.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m8.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m9.dtrace.gz
+Specs:
+	FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) iff (Integer_Variable_1 != -1) ) holds for: <orig(m), return> l:  122  - Fails:  5656 Quality:  5658
+Picked:
+	FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) iff (Integer_Variable_1 != -1) ) holds for: <orig(m), return>
+
+Vector: [0. 1. 1. 1. 1. 1. 0. 1. 1. 1. 0. 0. 0. 0. 1. 1. 1. 1. 1.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m10.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m11.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m12.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m13.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m14.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m16.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m17.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m18.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m4.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m6.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m7.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m8.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m9.dtrace.gz
+Specs:
+	FuzzedInvariant ( (Integer_Variable_0 > Integer_Variable_1) xor (Integer_Variable_1 < 0) ) holds for: <orig(m), return> l:  119  - Fails:  14402 Quality:  14404
+	FuzzedInvariant ( (Integer_Variable_0 > Integer_Variable_1) iff (Integer_Variable_1 >= 0) ) holds for: <orig(m), return> l:  120  - Fails:  14402 Quality:  14404
+	FuzzedInvariant ( (Integer_Variable_0 <= Integer_Variable_1) iff (Integer_Variable_1 <= -1) ) holds for: <orig(m), return> l:  122  - Fails:  14402 Quality:  14404
+Picked:
+	FuzzedInvariant ( (Integer_Variable_0 > Integer_Variable_1) xor (Integer_Variable_1 < 0) ) holds for: <orig(m), return>
+
+Vector: [0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 1. 1. 1. 1. 1.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m10.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m13.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m4.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m6.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m7.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m8.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m9.dtrace.gz
+Specs:
+	FuzzedInvariant ( (Integer_Variable_0 > 1) or (Integer_Variable_1 < 1) ) holds for: <orig(m), return> l:  101  - Fails:  1684 Quality:  1686
+Picked:
+	FuzzedInvariant ( (Integer_Variable_0 > 1) or (Integer_Variable_1 < 1) ) holds for: <orig(m), return>
+
+Vector: [0. 1. 0. 0. 1. 1. 0. 1. 1. 1. 0. 0. 0. 0. 1. 1. 1. 1. 1.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m10.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m13.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m14.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m16.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m17.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m18.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m4.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m6.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m7.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m8.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m9.dtrace.gz
+Specs:
+	FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) iff (Integer_Variable_1 < -1) ) holds for: <orig(m), return> l:  120  - Fails:  7600 Quality:  7602
+	FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) xor (Integer_Variable_1 < -1) ) holds for: <orig(m), return> l:  121  - Fails:  7600 Quality:  7602
+	FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) xor (Integer_Variable_1 >= -1) ) holds for: <orig(m), return> l:  121  - Fails:  7600 Quality:  7602
+Picked:
+	FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) iff (Integer_Variable_1 < -1) ) holds for: <orig(m), return>
+
+Vector: [0. 1. 0. 1. 1. 1. 0. 1. 1. 1. 0. 0. 0. 0. 1. 1. 1. 1. 1.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m10.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m12.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m13.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m14.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m16.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m17.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m18.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m4.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m6.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m7.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m8.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m9.dtrace.gz
+Specs:
+	FuzzedInvariant ( (Integer_Variable_0 > Integer_Variable_1) iff (Integer_Variable_1 >= -1) ) holds for: <orig(m), return> l:  121  - Fails:  11568 Quality:  11570
+Picked:
+	FuzzedInvariant ( (Integer_Variable_0 > Integer_Variable_1) iff (Integer_Variable_1 >= -1) ) holds for: <orig(m), return>
+
+Vector: [0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 1. 1. 0. 0.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m10.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m13.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m6.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m7.dtrace.gz
+Specs:
+	FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) implies (Integer_Variable_1 != Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  152  - Fails:  2140 Quality:  2143
+	FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) or (Integer_Variable_1 != Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  148  - Fails:  2140 Quality:  2143
+Picked:
+	FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) implies (Integer_Variable_1 != Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return>
+
+Vector: [0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 1. 0. 1. 0. 0.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m10.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m13.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m4.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m7.dtrace.gz
+Specs:
+	FuzzedInvariant ( (Integer_Variable_0 >= 1) or (Integer_Variable_1 > Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  130  - Fails:  2106 Quality:  2109
+	FuzzedInvariant ( (Integer_Variable_0 <= 0) implies (Integer_Variable_1 > Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  135  - Fails:  2106 Quality:  2109
+	FuzzedInvariant ( (Integer_Variable_0 = 0) implies (Integer_Variable_1 > Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  134  - Fails:  1908 Quality:  1911
+Picked:
+	FuzzedInvariant ( (Integer_Variable_0 >= 1) or (Integer_Variable_1 > Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return>
+
+Vector: [0. 1. 0. 1. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 1. 1. 1. 0. 0.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m10.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m12.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m13.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m4.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m6.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m7.dtrace.gz
+Specs:
+	FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) implies (Integer_Variable_1 > Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  151  - Fails:  3818 Quality:  3821
+Picked:
+	FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) implies (Integer_Variable_1 > Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return>
+
+Vector: [0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 1. 0. 1. 1.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m10.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m13.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m6.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m8.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m9.dtrace.gz
+Specs:
+	FuzzedInvariant ( (Integer_Variable_0 > 0) implies (Integer_Variable_1 != Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  135  - Fails:  758 Quality:  761
+	FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) implies (Integer_Variable_1 != Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  153  - Fails:  682 Quality:  685
+Picked:
+	FuzzedInvariant ( (Integer_Variable_0 > 0) implies (Integer_Variable_1 != Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return>
+
+Vector: [0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 1. 1.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m10.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m13.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m8.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m9.dtrace.gz
+Specs:
+	FuzzedInvariant ( (Integer_Variable_0 > 1) implies (Integer_Variable_1 != Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  135  - Fails:  674 Quality:  677
+	FuzzedInvariant ( (Integer_Variable_0 <= 1) or (Integer_Variable_1 != Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  131  - Fails:  674 Quality:  677
+	FuzzedInvariant ( (Integer_Variable_0 <= Integer_Variable_1) or (Integer_Variable_1 != Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  148  - Fails:  458 Quality:  461
+	FuzzedInvariant ( (Integer_Variable_0 > Integer_Variable_1) implies (Integer_Variable_1 != Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  152  - Fails:  458 Quality:  461
+Picked:
+	FuzzedInvariant ( (Integer_Variable_0 > 1) implies (Integer_Variable_1 != Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return>
+
+Vector: [0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 1. 0. 0. 1.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m10.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m13.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m6.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m9.dtrace.gz
+Specs:
+	FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) implies (Integer_Variable_1 != Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  152  - Fails:  224 Quality:  227
+	FuzzedInvariant ( (Integer_Variable_0 = 1) implies (Integer_Variable_1 != Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  135  - Fails:  84 Quality:  87
+	FuzzedInvariant ( (Integer_Variable_0 != 1) or (Integer_Variable_1 != Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  131  - Fails:  84 Quality:  87
+Picked:
+	FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) implies (Integer_Variable_1 != Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return>
+
+Vector: [0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 1. 0. 0. 0. 0.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m10.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m13.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m4.dtrace.gz
+Specs:
+	FuzzedInvariant ( (Integer_Variable_0 > -1) or (Integer_Variable_1 > Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  130  - Fails:  198 Quality:  201
+	FuzzedInvariant ( (Integer_Variable_0 >= 0) or (Integer_Variable_1 > Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  130  - Fails:  198 Quality:  201
+	FuzzedInvariant ( (Integer_Variable_0 < 0) implies (Integer_Variable_1 > Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  134  - Fails:  198 Quality:  201
+	FuzzedInvariant ( (Integer_Variable_0 >= -1) or (Integer_Variable_1 > Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  131  - Fails:  188 Quality:  191
+	FuzzedInvariant ( (Integer_Variable_0 < -1) implies (Integer_Variable_1 > Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  135  - Fails:  188 Quality:  191
+Picked:
+	FuzzedInvariant ( (Integer_Variable_0 > -1) or (Integer_Variable_1 > Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return>
+
+Vector: [0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m10.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m13.dtrace.gz
+Specs:
+	FuzzedInvariant ( (Integer_Variable_0 >= 0) or (Integer_Variable_1 != Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  131  - Fails:  180 Quality:  183
+	FuzzedInvariant ( (Integer_Variable_0 <= -1) implies (Integer_Variable_1 != Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  137  - Fails:  180 Quality:  183
+	FuzzedInvariant ( (Integer_Variable_0 < -1) implies (Integer_Variable_1 != Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  136  - Fails:  172 Quality:  175
+	FuzzedInvariant ( (Integer_Variable_0 >= -1) or (Integer_Variable_1 != Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  132  - Fails:  172 Quality:  175
+	FuzzedInvariant ( (Integer_Variable_0 = -1) implies (Integer_Variable_1 != Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  136  - Fails:  8 Quality:  11
+Picked:
+	FuzzedInvariant ( (Integer_Variable_0 >= 0) or (Integer_Variable_1 != Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return>
+
+Vector: [0. 1. 0. 1. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 1. 1. 1. 0. 1.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m10.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m12.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m13.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m4.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m6.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m7.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m9.dtrace.gz
+Specs:
+	FuzzedInvariant ( (Integer_Variable_0 != 1) or (Integer_Variable_1 > Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  130  - Fails:  246 Quality:  249
+	FuzzedInvariant ( (Integer_Variable_0 = 1) implies (Integer_Variable_1 > Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  134  - Fails:  246 Quality:  249
+Picked:
+	FuzzedInvariant ( (Integer_Variable_0 != 1) or (Integer_Variable_1 > Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return>
+
+Vector: [0. 0. 1. 0. 0. 1. 0. 1. 1. 1. 0. 0. 0. 0. 1. 1. 1. 1. 1.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m11.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m14.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m16.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m17.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m18.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m4.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m6.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m7.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m8.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m9.dtrace.gz
+Specs:
+	FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) implies (Integer_Variable_1 > -1) ) holds for: <orig(m), return> l:  125  - Fails:  7612 Quality:  7614
+	FuzzedInvariant ( (Integer_Variable_0 > 0) or (Integer_Variable_1 >= 0) ) holds for: <orig(x), return> l:  102  - Fails:  7612 Quality:  7614
+	FuzzedInvariant ( (Integer_Variable_0 = -1) or (Integer_Variable_1 >= 0) ) holds for: <orig(m), return> l:  103  - Fails:  7612 Quality:  7614
+	FuzzedInvariant ( (Integer_Variable_0 = 0) or (Integer_Variable_1 > -1) ) holds for: <orig(m), return> l:  102  - Fails:  7612 Quality:  7614
+	FuzzedInvariant ( (Integer_Variable_0 = 0) xor (Integer_Variable_1 > -1) ) holds for: <orig(m), return> l:  103  - Fails:  7612 Quality:  7614
+	FuzzedInvariant ( (Integer_Variable_0 = 0) or (Integer_Variable_1 > -1) ) holds for: <orig(x), return> l:  102  - Fails:  7612 Quality:  7614
+	FuzzedInvariant ( (Integer_Variable_0 != 0) iff (Integer_Variable_1 > -1) ) holds for: <orig(m), return> l:  104  - Fails:  7612 Quality:  7614
+	FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) or (Integer_Variable_1 >= 0) ) holds for: <orig(m), return> l:  119  - Fails:  7612 Quality:  7614
+	FuzzedInvariant ( (Integer_Variable_0 < 0) implies (Integer_Variable_1 >= 0) ) holds for: <orig(x), return> l:  107  - Fails:  7612 Quality:  7614
+	FuzzedInvariant ( (Integer_Variable_0 < 1) implies (Integer_Variable_1 > -1) ) holds for: <orig(x), return> l:  107  - Fails:  7612 Quality:  7614
+	FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) implies (Integer_Variable_1 >= 0) ) holds for: <orig(m), return> l:  125  - Fails:  7612 Quality:  7614
+	FuzzedInvariant ( Integer_Variable_0 >= 0 ) holds for: return l:  61  - Fails:  7612 Quality:  7613
+	FuzzedInvariant ( Integer_Variable_0 > -1 ) holds for: return l:  61  - Fails:  7612 Quality:  7613
+	\result >= 0 l:  12  - Fails:  7612 Quality:  7612
+	FuzzedInvariant ( (Integer_Variable_0 <= Integer_Variable_1) implies (Integer_Variable_1 >= 0) ) holds for: <orig(x), return> l:  125  - Fails:  5444 Quality:  5446
+	FuzzedInvariant ( (Integer_Variable_0 >= -1) or (Integer_Variable_1 >= 0) ) holds for: <orig(x), return> l:  104  - Fails:  4782 Quality:  4784
+	FuzzedInvariant ( (Integer_Variable_0 = -1) or (Integer_Variable_1 >= 0) ) holds for: <orig(x), return> l:  103  - Fails:  4782 Quality:  4784
+Picked:
+	FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) implies (Integer_Variable_1 > -1) ) holds for: <orig(m), return>
+
+Vector: [0. 0. 1. 0. 0. 1. 0. 1. 0. 0. 0. 0. 0. 0. 0. 1. 1. 1. 1.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m11.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m14.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m16.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m6.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m7.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m8.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m9.dtrace.gz
+Specs:
+	FuzzedInvariant ( (Integer_Variable_0 > 0) or (Integer_Variable_1 != -1) ) holds for: <orig(x), return> l:  103  - Fails:  2834 Quality:  2836
+	FuzzedInvariant ( (Integer_Variable_0 < 0) or (Integer_Variable_1 != -1) ) holds for: <orig(m), return> l:  103  - Fails:  2834 Quality:  2836
+	FuzzedInvariant ( (Integer_Variable_0 > -1) or (Integer_Variable_1 != -1) ) holds for: <orig(x), return> l:  104  - Fails:  2834 Quality:  2836
+	FuzzedInvariant ( (Integer_Variable_0 <= Integer_Variable_1) or (Integer_Variable_1 != -1) ) holds for: <orig(m), return> l:  121  - Fails:  2834 Quality:  2836
+	FuzzedInvariant ( (Integer_Variable_0 > Integer_Variable_1) or (Integer_Variable_1 != -1) ) holds for: <orig(x), return> l:  120  - Fails:  2834 Quality:  2836
+	FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) or (Integer_Variable_1 != -1) ) holds for: <orig(m), return> l:  120  - Fails:  2834 Quality:  2836
+	FuzzedInvariant ( (Integer_Variable_0 <= Integer_Variable_1) implies (Integer_Variable_1 != -1) ) holds for: <orig(x), return> l:  126  - Fails:  2834 Quality:  2836
+	FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) or (Integer_Variable_1 != -1) ) holds for: <orig(m), return> l:  120  - Fails:  2834 Quality:  2836
+	FuzzedInvariant ( Integer_Variable_0 != -1 ) holds for: return l:  62  - Fails:  2834 Quality:  2835
+Picked:
+	FuzzedInvariant ( (Integer_Variable_0 > 0) or (Integer_Variable_1 != -1) ) holds for: <orig(x), return>
+
+Vector: [0. 0. 1. 0. 0. 1. 0. 1. 0. 0. 0. 0. 0. 0. 0. 1. 1. 0. 1.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m11.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m14.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m16.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m6.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m7.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m9.dtrace.gz
+Specs:
+	FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) or (Integer_Variable_1 != -1) ) holds for: <orig(x), return> l:  120  - Fails:  950 Quality:  952
+Picked:
+	FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) or (Integer_Variable_1 != -1) ) holds for: <orig(x), return>
+
+Vector: [0. 0. 1. 0. 0. 1. 0. 1. 1. 1. 0. 0. 0. 0. 1. 1. 1. 0. 1.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m11.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m14.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m16.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m17.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m18.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m4.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m6.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m7.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m9.dtrace.gz
+Specs:
+	FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) implies (Integer_Variable_1 >= 0) ) holds for: <orig(x), return> l:  125  - Fails:  4506 Quality:  4508
+	FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) or (Integer_Variable_1 > -1) ) holds for: <orig(x), return> l:  120  - Fails:  2338 Quality:  2340
+Picked:
+	FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) implies (Integer_Variable_1 >= 0) ) holds for: <orig(x), return>
+
+Vector: [0. 0. 1. 0. 0. 1. 0. 1. 0. 0. 0. 0. 0. 0. 1. 1. 1. 1. 1.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m11.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m14.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m16.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m4.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m6.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m7.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m8.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m9.dtrace.gz
+Specs:
+	FuzzedInvariant ( (Integer_Variable_0 > -1) iff (Integer_Variable_1 != -1) ) holds for: <orig(m), return> l:  105  - Fails:  3008 Quality:  3010
+	FuzzedInvariant ( (Integer_Variable_0 = -1) iff (Integer_Variable_1 = -1) ) holds for: <orig(m), return> l:  104  - Fails:  2894 Quality:  2896
+Picked:
+	FuzzedInvariant ( (Integer_Variable_0 > -1) iff (Integer_Variable_1 != -1) ) holds for: <orig(m), return>
+
+Vector: [0. 0. 1. 1. 0. 1. 0. 1. 1. 1. 0. 0. 0. 0. 1. 1. 1. 1. 1.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m11.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m12.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m14.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m16.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m17.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m18.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m4.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m6.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m7.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m8.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m9.dtrace.gz
+Specs:
+	FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) xor (Integer_Variable_1 > -1) ) holds for: <orig(m), return> l:  120  - Fails:  11580 Quality:  11582
+	FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) xor (Integer_Variable_1 <= -1) ) holds for: <orig(m), return> l:  122  - Fails:  11580 Quality:  11582
+	FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) xor (Integer_Variable_1 < 0) ) holds for: <orig(m), return> l:  120  - Fails:  11580 Quality:  11582
+	FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) iff (Integer_Variable_1 <= -1) ) holds for: <orig(m), return> l:  121  - Fails:  11580 Quality:  11582
+Picked:
+	FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) xor (Integer_Variable_1 > -1) ) holds for: <orig(m), return>
+
+Vector: [0. 0. 1. 0. 0. 1. 0. 1. 1. 1. 0. 0. 0. 0. 0. 1. 1. 1. 1.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m11.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m14.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m16.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m17.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m18.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m6.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m7.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m8.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m9.dtrace.gz
+Specs:
+	FuzzedInvariant ( (Integer_Variable_0 < -1) or (Integer_Variable_1 > -1) ) holds for: <orig(m), return> l:  103  - Fails:  7570 Quality:  7572
+Picked:
+	FuzzedInvariant ( (Integer_Variable_0 < -1) or (Integer_Variable_1 > -1) ) holds for: <orig(m), return>
+
+Vector: [0. 0. 1. 0. 0. 1. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 1. 0.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m11.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m14.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m16.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m8.dtrace.gz
+Specs:
+	FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) or (Integer_Variable_1 != -1) ) holds for: <orig(x), return> l:  120  - Fails:  1884 Quality:  1886
+	FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) implies (Integer_Variable_1 != -1) ) holds for: <orig(x), return> l:  125  - Fails:  1884 Quality:  1886
+Picked:
+	FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) or (Integer_Variable_1 != -1) ) holds for: <orig(x), return>
+
+Vector: [0. 0. 1. 0. 0. 1. 0. 1. 0. 1. 0. 0. 0. 0. 1. 0. 0. 1. 0.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m11.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m14.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m16.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m18.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m4.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m8.dtrace.gz
+Specs:
+	FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) implies (Integer_Variable_1 >= 0) ) holds for: <orig(x), return> l:  124  - Fails:  3106 Quality:  3108
+	FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) or (Integer_Variable_1 >= 0) ) holds for: <orig(x), return> l:  120  - Fails:  3106 Quality:  3108
+Picked:
+	FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) implies (Integer_Variable_1 >= 0) ) holds for: <orig(x), return>
+
+Vector: [0. 0. 1. 0. 0. 1. 0. 1. 1. 1. 0. 0. 0. 0. 1. 0. 0. 1. 0.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m11.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m14.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m16.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m17.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m18.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m4.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m8.dtrace.gz
+Specs:
+	FuzzedInvariant ( (Integer_Variable_0 < -1) or (Integer_Variable_1 > -1) ) holds for: <orig(x), return> l:  103  - Fails:  2830 Quality:  2832
+Picked:
+	FuzzedInvariant ( (Integer_Variable_0 < -1) or (Integer_Variable_1 > -1) ) holds for: <orig(x), return>
+
+Vector: [0. 0. 1. 0. 0. 1. 0. 1. 1. 1. 0. 0. 0. 0. 1. 1. 0. 1. 0.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m11.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m14.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m16.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m17.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m18.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m4.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m6.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m8.dtrace.gz
+Specs:
+	FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) or (Integer_Variable_1 >= 0) ) holds for: <orig(x), return> l:  119  - Fails:  5274 Quality:  5276
+	FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) implies (Integer_Variable_1 > -1) ) holds for: <orig(x), return> l:  125  - Fails:  5274 Quality:  5276
+Picked:
+	FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) or (Integer_Variable_1 >= 0) ) holds for: <orig(x), return>
+
+Vector: [0. 0. 1. 1. 0. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m11.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m12.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m14.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m15.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m16.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m17.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m18.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m19.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m2.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m21.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m3.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m4.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m6.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m7.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m8.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m9.dtrace.gz
+Specs:
+	FuzzedInvariant ( (Integer_Variable_0 = -1) implies (Integer_Variable_1 >= 1) ) holds for: <orig(x), return> l:  108  - Fails:  4772 Quality:  4774
+Picked:
+	FuzzedInvariant ( (Integer_Variable_0 = -1) implies (Integer_Variable_1 >= 1) ) holds for: <orig(x), return>
+
+Vector: [0. 0. 1. 1. 0. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 0. 1.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m11.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m12.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m14.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m15.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m16.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m17.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m18.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m19.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m2.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m21.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m3.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m4.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m6.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m7.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m9.dtrace.gz
+Specs:
+	FuzzedInvariant ( (Integer_Variable_0 = -1) implies (Integer_Variable_1 != 0) ) holds for: <orig(x), return> l:  108  - Fails:  1942 Quality:  1944
+Picked:
+	FuzzedInvariant ( (Integer_Variable_0 = -1) implies (Integer_Variable_1 != 0) ) holds for: <orig(x), return>
+
+Vector: [0. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 1. 1. 1. 1. 1.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m12.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m4.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m6.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m7.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m8.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m9.dtrace.gz
+Specs:
+	FuzzedInvariant ( Integer_Variable_0 > Integer_Variable_1 + -1 ) holds for: <orig(m), return> l:  93  - Fails:  3968 Quality:  3970
+	FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 * 1 ) holds for: <orig(m), return> l:  93  - Fails:  3968 Quality:  3970
+	FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) or (Integer_Variable_1 <= -1) ) holds for: <orig(m), return> l:  121  - Fails:  3968 Quality:  3970
+	FuzzedInvariant ( Integer_Variable_0 > Integer_Variable_1 - 1 ) holds for: <orig(m), return> l:  92  - Fails:  3968 Quality:  3970
+	FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 ) holds for: <orig(m), return> l:  89  - Fails:  3968 Quality:  3970
+	FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 - 0 ) holds for: <orig(m), return> l:  93  - Fails:  3968 Quality:  3970
+	FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 + 0 ) holds for: <orig(m), return> l:  93  - Fails:  3968 Quality:  3970
+	FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) implies (Integer_Variable_1 < 0) ) holds for: <orig(m), return> l:  123  - Fails:  3968 Quality:  3970
+	FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) implies (Integer_Variable_1 = -1) ) holds for: <orig(m), return> l:  124  - Fails:  3968 Quality:  3970
+	FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) or (Integer_Variable_1 = -1) ) holds for: <orig(m), return> l:  120  - Fails:  3968 Quality:  3970
+	FuzzedInvariant ( (Integer_Variable_0 != -1) implies (Integer_Variable_1 >= Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  137  - Fails:  3966 Quality:  3969
+	FuzzedInvariant ( (Integer_Variable_0 >= -1) implies (Integer_Variable_1 >= Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  137  - Fails:  3952 Quality:  3955
+	FuzzedInvariant ( (Integer_Variable_0 <= 0) or (Integer_Variable_1 >= Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  131  - Fails:  3926 Quality:  3929
+	FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) or (Integer_Variable_1 = 0) ) holds for: <orig(m), return> l:  119  - Fails:  3884 Quality:  3886
+	FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) implies (Integer_Variable_1 <= 0) ) holds for: <orig(m), return> l:  124  - Fails:  3884 Quality:  3886
+	FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) or (Integer_Variable_1 < 1) ) holds for: <orig(m), return> l:  119  - Fails:  3884 Quality:  3886
+	FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 + -1 ) holds for: <orig(m), return> l:  94  - Fails:  3674 Quality:  3676
+	FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 - 1 ) holds for: <orig(m), return> l:  93  - Fails:  3674 Quality:  3676
+	FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) implies (Integer_Variable_1 >= Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  153  - Fails:  2290 Quality:  2293
+	FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) or (Integer_Variable_1 >= Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  147  - Fails:  2290 Quality:  2293
+	FuzzedInvariant ( (Integer_Variable_0 <= Integer_Variable_1) or (Integer_Variable_1 >= Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  148  - Fails:  2068 Quality:  2071
+	FuzzedInvariant ( (Integer_Variable_0 > Integer_Variable_1) implies (Integer_Variable_1 >= Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  152  - Fails:  2068 Quality:  2071
+Picked:
+	FuzzedInvariant ( Integer_Variable_0 > Integer_Variable_1 + -1 ) holds for: <orig(m), return>
+
+Vector: [0. 0. 0. 1. 0. 1. 0. 1. 1. 1. 0. 0. 0. 0. 1. 1. 1. 1. 1.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m12.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m14.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m16.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m17.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m18.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m4.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m6.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m7.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m8.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m9.dtrace.gz
+Specs:
+	FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) iff (Integer_Variable_1 >= -1) ) holds for: <orig(m), return> l:  122  - Fails:  8746 Quality:  8748
+Picked:
+	FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) iff (Integer_Variable_1 >= -1) ) holds for: <orig(m), return>
+
+Vector: [0. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 1. 1. 1. 0. 0.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m12.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m4.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m6.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m7.dtrace.gz
+Specs:
+	FuzzedInvariant ( (Integer_Variable_0 <= Integer_Variable_1) implies (Integer_Variable_1 >= Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  153  - Fails:  1900 Quality:  1903
+	FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) implies (Integer_Variable_1 >= Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  152  - Fails:  1678 Quality:  1681
+	FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) or (Integer_Variable_1 >= Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  148  - Fails:  1678 Quality:  1681
+Picked:
+	FuzzedInvariant ( (Integer_Variable_0 <= Integer_Variable_1) implies (Integer_Variable_1 >= Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return>
+
+Vector: [0. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 1. 1. 0. 0.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m12.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m6.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m7.dtrace.gz
+Specs:
+	FuzzedInvariant ( (Integer_Variable_0 = 1) implies (Integer_Variable_1 <= 1) ) holds for: <orig(x), return> l:  107  - Fails:  230 Quality:  232
+Picked:
+	FuzzedInvariant ( (Integer_Variable_0 = 1) implies (Integer_Variable_1 <= 1) ) holds for: <orig(x), return>
+
+Vector: [0. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 1. 0. 1. 1. 1.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m12.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m4.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m7.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m8.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m9.dtrace.gz
+Specs:
+	FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 - 1 ) holds for: <orig(m), return> l:  93  - Fails:  294 Quality:  296
+	FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 + -1 ) holds for: <orig(m), return> l:  94  - Fails:  294 Quality:  296
+Picked:
+	FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 - 1 ) holds for: <orig(m), return>
+
+Vector: [0. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 1. 0. 1. 0. 0.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m12.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m4.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m7.dtrace.gz
+Specs:
+	FuzzedInvariant ( (Integer_Variable_0 > 1) or (Integer_Variable_1 >= Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  130  - Fails:  204 Quality:  207
+	FuzzedInvariant ( (Integer_Variable_0 = 1) implies (Integer_Variable_1 >= Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  135  - Fails:  162 Quality:  165
+Picked:
+	FuzzedInvariant ( (Integer_Variable_0 > 1) or (Integer_Variable_1 >= Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return>
+
+Vector: [0. 0. 0. 0. 0. 1. 0. 1. 1. 1. 0. 0. 0. 0. 1. 1. 1. 1. 1.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m14.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m16.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m17.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m18.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m4.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m6.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m7.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m8.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m9.dtrace.gz
+Specs:
+	FuzzedInvariant ( (Integer_Variable_0 > -1) xor (Integer_Variable_1 < -1) ) holds for: <orig(m), return> l:  104  - Fails:  4868 Quality:  4870
+	FuzzedInvariant ( (Integer_Variable_0 >= 1) iff (Integer_Variable_1 >= -1) ) holds for: <orig(m), return> l:  105  - Fails:  4868 Quality:  4870
+	FuzzedInvariant ( (Integer_Variable_0 < 0) iff (Integer_Variable_1 < -1) ) holds for: <orig(m), return> l:  103  - Fails:  4868 Quality:  4870
+	FuzzedInvariant ( (Integer_Variable_0 < -1) xor (Integer_Variable_1 >= -1) ) holds for: <orig(m), return> l:  105  - Fails:  4808 Quality:  4810
+	FuzzedInvariant ( (Integer_Variable_0 < 1) implies (Integer_Variable_1 >= -1) ) holds for: <orig(x), return> l:  108  - Fails:  4778 Quality:  4780
+	FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) or (Integer_Variable_1 >= -1) ) holds for: <orig(m), return> l:  120  - Fails:  4778 Quality:  4780
+	FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) implies (Integer_Variable_1 >= -1) ) holds for: <orig(m), return> l:  126  - Fails:  4778 Quality:  4780
+	FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) implies (Integer_Variable_1 >= -1) ) holds for: <orig(m), return> l:  126  - Fails:  4778 Quality:  4780
+	FuzzedInvariant ( Integer_Variable_0 >= -1 ) holds for: return l:  62  - Fails:  4778 Quality:  4779
+	FuzzedInvariant ( (Integer_Variable_0 <= Integer_Variable_1) implies (Integer_Variable_1 >= -1) ) holds for: <orig(x), return> l:  126  - Fails:  2610 Quality:  2612
+Picked:
+	FuzzedInvariant ( (Integer_Variable_0 > -1) xor (Integer_Variable_1 < -1) ) holds for: <orig(m), return>
+
+Vector: [0. 0. 0. 0. 0. 1. 0. 1. 1. 1. 0. 0. 0. 0. 1. 1. 0. 1. 0.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m14.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m16.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m17.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m18.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m4.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m6.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m8.dtrace.gz
+Specs:
+	FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) implies (Integer_Variable_1 >= -1) ) holds for: <orig(x), return> l:  126  - Fails:  3390 Quality:  3392
+Picked:
+	FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) implies (Integer_Variable_1 >= -1) ) holds for: <orig(x), return>
+
+Vector: [0. 0. 0. 0. 0. 1. 0. 1. 0. 1. 0. 0. 0. 0. 1. 0. 0. 1. 0.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m14.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m16.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m18.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m4.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m8.dtrace.gz
+Specs:
+	FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) implies (Integer_Variable_1 >= -1) ) holds for: <orig(x), return> l:  125  - Fails:  1222 Quality:  1224
+Picked:
+	FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) implies (Integer_Variable_1 >= -1) ) holds for: <orig(x), return>
+
+Vector: [0. 0. 0. 0. 0. 1. 0. 1. 1. 1. 0. 0. 0. 0. 0. 1. 1. 1. 1.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m14.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m16.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m17.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m18.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m6.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m7.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m8.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m9.dtrace.gz
+Specs:
+	FuzzedInvariant ( (Integer_Variable_0 > 1) implies (Integer_Variable_1 >= -1) ) holds for: <orig(m), return> l:  108  - Fails:  4666 Quality:  4668
+Picked:
+	FuzzedInvariant ( (Integer_Variable_0 > 1) implies (Integer_Variable_1 >= -1) ) holds for: <orig(m), return>
+
+Vector: [0. 0. 0. 0. 0. 1. 0. 1. 1. 1. 0. 0. 0. 0. 1. 1. 1. 0. 1.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m14.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m16.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m17.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m18.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m4.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m6.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m7.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m9.dtrace.gz
+Specs:
+	FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) implies (Integer_Variable_1 >= -1) ) holds for: <orig(x), return> l:  126  - Fails:  3556 Quality:  3558
+	FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) or (Integer_Variable_1 >= -1) ) holds for: <orig(x), return> l:  120  - Fails:  3556 Quality:  3558
+Picked:
+	FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) implies (Integer_Variable_1 >= -1) ) holds for: <orig(x), return>
+
+Vector: [0. 0. 0. 0. 0. 0. 0. 0. 1. 1. 0. 0. 0. 0. 1. 1. 1. 1. 1.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m17.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m18.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m4.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m6.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m7.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m8.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m9.dtrace.gz
+Specs:
+	FuzzedInvariant ( Integer_Variable_0 > Integer_Variable_1 * -1 ) holds for: <orig(m), return> l:  93  - Fails:  4104 Quality:  4106
+	FuzzedInvariant ( Integer_Variable_0 > Integer_Variable_1 / -1 ) holds for: <orig(m), return> l:  93  - Fails:  4104 Quality:  4106
+	FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 / -1 ) holds for: <orig(m), return> l:  94  - Fails:  3228 Quality:  3230
+	FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 * -1 ) holds for: <orig(m), return> l:  94  - Fails:  3228 Quality:  3230
+Picked:
+	FuzzedInvariant ( Integer_Variable_0 > Integer_Variable_1 * -1 ) holds for: <orig(m), return>
+
+Vector: [0. 0. 0. 0. 0. 0. 0. 0. 1. 0. 0. 0. 0. 0. 0. 1. 1. 1. 1.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m17.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m6.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m7.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m8.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m9.dtrace.gz
+Specs:
+	FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 * -1 ) holds for: <orig(m), return> l:  94  - Fails:  876 Quality:  878
+	FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 / -1 ) holds for: <orig(m), return> l:  94  - Fails:  876 Quality:  878
+Picked:
+	FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 * -1 ) holds for: <orig(m), return>
+
+Vector: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 1. 0. 0. 0. 0.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m4.dtrace.gz
+Specs:
+	FuzzedInvariant ( (Integer_Variable_0 >= 0) or (Integer_Variable_1 = -1) ) holds for: <orig(m), return> l:  103  - Fails:  174 Quality:  176
+	FuzzedInvariant ( Integer_Variable_0 > Integer_Variable_1 % -1 ) holds for: <orig(m), return> l:  93  - Fails:  174 Quality:  176
+	FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 * 0 ) holds for: <orig(m), return> l:  93  - Fails:  174 Quality:  176
+	FuzzedInvariant ( Integer_Variable_0 > Integer_Variable_1 % 1 ) holds for: <orig(m), return> l:  92  - Fails:  174 Quality:  176
+	FuzzedInvariant ( Integer_Variable_0 > Integer_Variable_1 * 0 ) holds for: <orig(m), return> l:  92  - Fails:  174 Quality:  176
+	FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 % -1 ) holds for: <orig(m), return> l:  94  - Fails:  174 Quality:  176
+	FuzzedInvariant ( (Integer_Variable_0 < 1) implies (Integer_Variable_1 = 1) ) holds for: <orig(m), return> l:  106  - Fails:  158 Quality:  160
+	FuzzedInvariant ( (Integer_Variable_0 >= 0) or (Integer_Variable_1 = 1) ) holds for: <orig(m), return> l:  102  - Fails:  158 Quality:  160
+	FuzzedInvariant ( (Integer_Variable_0 >= 1) or (Integer_Variable_1 = 1) ) holds for: <orig(m), return> l:  102  - Fails:  158 Quality:  160
+	FuzzedInvariant ( (Integer_Variable_0 <= 0) implies (Integer_Variable_1 > 1) ) holds for: <orig(m), return> l:  107  - Fails:  142 Quality:  144
+	FuzzedInvariant ( (Integer_Variable_0 > -1) or (Integer_Variable_1 > 1) ) holds for: <orig(m), return> l:  102  - Fails:  142 Quality:  144
+	FuzzedInvariant ( (Integer_Variable_0 < 0) implies (Integer_Variable_1 < 0) ) holds for: <orig(m), return> l:  106  - Fails:  132 Quality:  134
+	FuzzedInvariant ( (Integer_Variable_0 < 0) implies (Integer_Variable_1 = 0) ) holds for: <orig(m), return> l:  106  - Fails:  90 Quality:  92
+	FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) implies (Integer_Variable_1 != 0) ) holds for: <orig(m), return> l:  124  - Fails:  84 Quality:  86
+	FuzzedInvariant ( (Integer_Variable_0 > Integer_Variable_1) or (Integer_Variable_1 > 0) ) holds for: <orig(m), return> l:  118  - Fails:  84 Quality:  86
+	FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) implies (Integer_Variable_1 > 0) ) holds for: <orig(m), return> l:  123  - Fails:  84 Quality:  86
+	FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) or (Integer_Variable_1 > 0) ) holds for: <orig(m), return> l:  119  - Fails:  84 Quality:  86
+	FuzzedInvariant ( (Integer_Variable_0 <= Integer_Variable_1) implies (Integer_Variable_1 != 0) ) holds for: <orig(m), return> l:  125  - Fails:  84 Quality:  86
+	FuzzedInvariant ( (Integer_Variable_0 >= -1) or (Integer_Variable_1 <= -1) ) holds for: <orig(m), return> l:  105  - Fails:  72 Quality:  74
+	FuzzedInvariant ( (Integer_Variable_0 = -1) implies (Integer_Variable_1 >= 1) ) holds for: <orig(m), return> l:  108  - Fails:  60 Quality:  62
+	FuzzedInvariant ( (Integer_Variable_0 = -1) implies (Integer_Variable_1 > 1) ) holds for: <orig(m), return> l:  107  - Fails:  60 Quality:  62
+	FuzzedInvariant ( (Integer_Variable_0 = -1) implies (Integer_Variable_1 != 0) ) holds for: <orig(m), return> l:  108  - Fails:  60 Quality:  62
+	FuzzedInvariant ( (Integer_Variable_0 != -1) or (Integer_Variable_1 = 1) ) holds for: <orig(m), return> l:  103  - Fails:  60 Quality:  62
+	FuzzedInvariant ( (Integer_Variable_0 != -1) or (Integer_Variable_1 = -1) ) holds for: <orig(m), return> l:  104  - Fails:  60 Quality:  62
+	FuzzedInvariant ( (Integer_Variable_0 <= -1) implies (Integer_Variable_1 <= 0) ) holds for: <orig(m), return> l:  109  - Fails:  48 Quality:  50
+	FuzzedInvariant ( (Integer_Variable_0 <= 0) implies (Integer_Variable_1 >= Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  136  - Fails:  42 Quality:  45
+	FuzzedInvariant ( (Integer_Variable_0 < 1) implies (Integer_Variable_1 >= Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  135  - Fails:  42 Quality:  45
+	FuzzedInvariant ( (Integer_Variable_0 > 0) or (Integer_Variable_1 >= Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  130  - Fails:  42 Quality:  45
+	FuzzedInvariant ( (Integer_Variable_0 >= 1) or (Integer_Variable_1 >= Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  131  - Fails:  42 Quality:  45
+	FuzzedInvariant ( (Integer_Variable_0 >= -1) or (Integer_Variable_1 >= 0) ) holds for: <orig(m), return> l:  104  - Fails:  42 Quality:  44
+	FuzzedInvariant ( (Integer_Variable_0 < 1) implies (Integer_Variable_1 >= -1) ) holds for: <orig(m), return> l:  108  - Fails:  42 Quality:  44
+	FuzzedInvariant ( (Integer_Variable_0 > 0) or (Integer_Variable_1 >= 0) ) holds for: <orig(m), return> l:  102  - Fails:  42 Quality:  44
+	FuzzedInvariant ( (Integer_Variable_0 < 0) implies (Integer_Variable_1 >= 0) ) holds for: <orig(m), return> l:  107  - Fails:  42 Quality:  44
+	FuzzedInvariant ( (Integer_Variable_0 < 1) implies (Integer_Variable_1 > -1) ) holds for: <orig(m), return> l:  107  - Fails:  42 Quality:  44
+	FuzzedInvariant ( (Integer_Variable_0 < 1) implies (Integer_Variable_1 <= 1) ) holds for: <orig(m), return> l:  107  - Fails:  32 Quality:  34
+	FuzzedInvariant ( (Integer_Variable_0 = 0) implies (Integer_Variable_1 >= Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  135  - Fails:  24 Quality:  27
+	FuzzedInvariant ( (Integer_Variable_0 != 0) or (Integer_Variable_1 >= Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  131  - Fails:  24 Quality:  27
+	FuzzedInvariant ( (Integer_Variable_0 >= 0) or (Integer_Variable_1 >= Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  131  - Fails:  18 Quality:  21
+	FuzzedInvariant ( (Integer_Variable_0 > -1) or (Integer_Variable_1 >= Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  131  - Fails:  18 Quality:  21
+	FuzzedInvariant ( (Integer_Variable_0 < -1) implies (Integer_Variable_1 >= Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  136  - Fails:  16 Quality:  19
+	FuzzedInvariant ( (Integer_Variable_0 = -1) implies (Integer_Variable_1 >= Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  136  - Fails:  2 Quality:  5
+Picked:
+	FuzzedInvariant ( (Integer_Variable_0 >= 0) or (Integer_Variable_1 = -1) ) holds for: <orig(m), return>
+
+Vector: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 1. 1. 1. 0. 0.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m4.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m6.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m7.dtrace.gz
+Specs:
+	FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) or (Integer_Variable_1 >= Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return> l:  148  - Fails:  222 Quality:  225
+Picked:
+	FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) or (Integer_Variable_1 >= Integer_Variable_2) ) holds for: <orig(x) , orig(m) , return>
+
+Vector: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 1. 1. 1. 1.]
+Mutants:
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m6.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m7.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m8.dtrace.gz
+	/home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/setup-files/mutants/IntMathTesterDriverAugmentedGPT51-m9.dtrace.gz
+Specs:
+	FuzzedInvariant ( (Integer_Variable_0 = 1) implies (Integer_Variable_1 <= 1) ) holds for: <orig(m), return> l:  107  - Fails:  458 Quality:  460
+	FuzzedInvariant ( (Integer_Variable_0 = 1) implies (Integer_Variable_1 >= -1) ) holds for: <orig(m), return> l:  108  - Fails:  70 Quality:  72
+Picked:
+	FuzzedInvariant ( (Integer_Variable_0 = 1) implies (Integer_Variable_1 <= 1) ) holds for: <orig(m), return>
+
+Buckets: 51
+Specs: 51
+Saved in file: /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/IntMath-mod-GPT51-specvalid-buckets.assertion
+
+INFO:logger_4972490673075061607:✓ Bucket assertions written to /home/inv/ebalestra/specvalid/output/IntMath_mod/bucketing/model_GPT51/IntMath-mod-GPT51-specvalid-buckets.assertions
+INFO:logger_4972490673075061607:  Processed 20 mutants
+INFO:logger_4972490673075061607:  Bucket stats: ['buckets=51', 'specs=51']
+INFO:logger_4972490673075061607:Running bucketing for model: N_DeepSeekR1
+INFO:logger_4972490673075061607:Loaded 38 compiled tests for model N_DeepSeekR1
+INFO:logger_4972490673075061607:Cleaning project before updating suites
+INFO:logger_4972490673075061607:Compiling augmented project
+INFO:logger_4972490673075061607:Running DynComp and Chicory for driver testers.IntMathTesterDriverAugmentedNDeepSeekR1 (model N_DeepSeekR1)
+ERROR:logger_4972490673075061607:❌ Error during bucketing: sequence item 5: expected str instance, PosixPath found

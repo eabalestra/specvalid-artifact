@@ -1,0 +1,4 @@
+daikon.Quant.size(this.keys) == 1 || daikon.Quant.size(this.keys) == 2 || daikon.Quant.size(this.keys) == 3
+daikon.Quant.size(this.data) == 1 || daikon.Quant.size(this.data) == 2 || daikon.Quant.size(this.data) == 3
+daikon.Quant.memberOf(\old(v.getClass().getName()) , daikon.Quant.typeArray(this.keys) )
+\result == 0 || \result == 1 || \result == 2

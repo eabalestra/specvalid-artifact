@@ -1,0 +1,9 @@
+INFO:logger_4531265689911524488:Running bucketing (augmented) for RingBuffer_item.
+INFO:logger_4531265689911524488:Arguments: Namespace(list_llms=False, list_prompts=False, output_dir='output', command='testgen', no_invs_filtering=False, reuse_tests=False, target_class_src='/home/inv/ebalestra/specvalid-deepseekr1/experiments/GAssert/subjects/ringbuffer_item/src/main/java/examples/RingBuffer.java', test_suite='/home/inv/ebalestra/specvalid-deepseekr1/experiments/GAssert/subjects/ringbuffer_item/src/test/java/testers/RingBufferTester0.java', test_driver='/home/inv/ebalestra/specvalid-deepseekr1/experiments/GAssert/subjects/ringbuffer_item/src/test/java/testers/RingBufferTesterDriver.java', buckets_assertions_file='/home/inv/ebalestra/specvalid-deepseekr1/experiments/specfuzzer-subject-results/ringbuffer_item/output/RingBuffer-item-specfuzzer-1-buckets.assertions', method='item', models_list=['GPT4oMini'], models_prefix=None, prompts_list=['General_V1'], specfuzzer_invs_file='/home/inv/ebalestra/specvalid-deepseekr1/experiments/specfuzzer-subject-results/ringbuffer_item/output/RingBuffer-item-specfuzzer-1.inv.gz', specfuzzer_assertions_file='/home/inv/ebalestra/specvalid-deepseekr1/experiments/specfuzzer-subject-results/ringbuffer_item/output/RingBuffer-item-specfuzzer-1.assertions')
+INFO:logger_4531265689911524488:Found 1 models with compiled tests: ['N_DeepSeekR1']
+INFO:logger_4531265689911524488:Running bucketing for model: N_DeepSeekR1
+INFO:logger_4531265689911524488:Loaded 75 compiled tests for model N_DeepSeekR1
+INFO:logger_4531265689911524488:Cleaning project before updating suites
+INFO:logger_4531265689911524488:Compiling augmented project
+INFO:logger_4531265689911524488:Running DynComp and Chicory for driver testers.RingBufferTesterDriverAugmentedNDeepSeekR1 (model N_DeepSeekR1)
+ERROR:logger_4531265689911524488:❌ Error during bucketing: sequence item 5: expected str instance, PosixPath found

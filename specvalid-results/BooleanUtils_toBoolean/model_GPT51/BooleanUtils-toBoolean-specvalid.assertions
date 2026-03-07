@@ -1,0 +1,5 @@
+value != null
+trueValue != null
+falseValue != null
+(\old(value) == \old(trueValue)) || !(\result == true)
+(\old(value) == \old(falseValue)) || !(\result == false)

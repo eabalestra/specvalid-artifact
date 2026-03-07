@@ -1,0 +1,2 @@
+this.topOfStack < daikon.Quant.size(this.theArray)-1
+\old(this.topOfStack) < daikon.Quant.size(this.theArray)-1

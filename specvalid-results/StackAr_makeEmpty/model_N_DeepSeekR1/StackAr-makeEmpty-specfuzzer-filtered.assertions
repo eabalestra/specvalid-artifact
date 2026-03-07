@@ -1,0 +1,5 @@
+this.topOfStack < daikon.Quant.size(this.theArray)-1
+daikon.Quant.eltsEqual(daikon.Quant.typeArray(this.theArray), null)
+\old(this.topOfStack) < daikon.Quant.size(this.theArray)-1
+FuzzedInvariant ( no n : StackAr.theArray : n != null ) holds for: orig(this)
+FuzzedInvariant ( all n : StackAr.theArray : n = null ) holds for: orig(this)

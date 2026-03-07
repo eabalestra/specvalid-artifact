@@ -1,0 +1,2 @@
+this.topOfStack < daikon.Quant.size(this.theArray)-1
+daikon.Quant.memberOf(\old(daikon.Quant.getElement_Object(this.theArray, \new(this.topOfStack))) , this.theArray )

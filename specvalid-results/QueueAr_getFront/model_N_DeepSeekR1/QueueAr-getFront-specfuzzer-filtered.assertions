@@ -1,0 +1,14 @@
+this.front == 0 || this.front == 1 || this.front == 2
+FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 / -1 ) holds for: <this.currentSize, this.front>
+FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 % 1 ) holds for: <this.front, this.back>
+FuzzedInvariant ( Integer_Variable_0 >= 0 ) holds for: this.front
+FuzzedInvariant ( Integer_Variable_0 > -1 ) holds for: this.front
+FuzzedInvariant ( Integer_Variable_0 != -1 ) holds for: this.front
+FuzzedInvariant ( (Integer_Variable_0 >= 1) or (Integer_Variable_1 > -1) ) holds for: <this.currentSize, this.front>
+FuzzedInvariant ( (Integer_Variable_0 >= 0) iff (Integer_Variable_1 >= -1) ) holds for: <this.front, this.back>
+FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) implies (Integer_Variable_1 < 1) ) holds for: <this.front, this.back>
+FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) implies (Integer_Variable_1 < 1) ) holds for: <this.currentSize, this.front>
+FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) implies (Integer_Variable_1 < 1) ) holds for: <this.currentSize, this.back>
+FuzzedInvariant ( (Integer_Variable_0 <= Integer_Variable_1) or (Integer_Variable_1 >= 0) ) holds for: <this.currentSize, this.front>
+FuzzedInvariant ( (Integer_Variable_0 <= -1) implies (Integer_Variable_1 = -1) ) holds for: <this.front, this.back>
+FuzzedInvariant ( (Integer_Variable_0 < 0) implies (Integer_Variable_1 < 1) ) holds for: <this.front, this.back>

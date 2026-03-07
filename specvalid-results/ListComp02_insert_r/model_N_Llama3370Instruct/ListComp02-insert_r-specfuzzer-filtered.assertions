@@ -1,0 +1,3 @@
+daikon.Quant.size(this._var49) == 1 || daikon.Quant.size(this._var49) == 2 || daikon.Quant.size(this._var49) == 3
+daikon.Quant.eltsEqual(daikon.Quant.typeArray(this._var49), null)
+FuzzedInvariant ( some n : ListComp02._var49 : n = null ) holds for: orig(this)

@@ -1,0 +1,41 @@
+INFO:logger_655637193678439603:Running test generation for Structure_foo.
+INFO:logger_655637193678439603:Arguments: Namespace(list_llms=False, list_prompts=False, output_dir='results/paper/full_suite_35_/', command='testgen', no_invs_filtering=False, reuse_tests=False, target_class_src='/home/ldap/degiovanni@private.list.lu/specvalid/experiments/GAssert/subjects/structure_foo/src/main/java/examples/Structure.java', test_suite='/home/ldap/degiovanni@private.list.lu/specvalid/experiments/GAssert/subjects/structure_foo/src/test/java/testers/StructureTester0.java', test_driver='/home/ldap/degiovanni@private.list.lu/specvalid/experiments/GAssert/subjects/structure_foo/src/test/java/testers/StructureTesterDriver.java', buckets_assertions_file='/home/ldap/degiovanni@private.list.lu/specvalid/experiments/specfuzzer-subject-results/structure_foo/output/Structure-foo-specfuzzer-1-buckets.assertions', method='foo', models_list=['GPT51'], models_prefix=None, prompts_list=['General_V1'], specfuzzer_invs_file='/home/ldap/degiovanni@private.list.lu/specvalid/experiments/specfuzzer-subject-results/structure_foo/output/Structure-foo-specfuzzer-1.inv.gz', specfuzzer_assertions_file='/home/ldap/degiovanni@private.list.lu/specvalid/experiments/specfuzzer-subject-results/structure_foo/output/Structure-foo-specfuzzer-1.assertions')
+INFO:logger_655637193678439603:Generating tests with LLMs...
+INFO:logger_655637193678439603:Starting test generation for <subject.subject.Subject object at 0x7f86815cfcd0>...
+INFO:logger_655637193678439603:Generating test for assertion: return != -1
+INFO:logger_655637193678439603:LLM response for prompt PromptID.General_V1 and model GPT51: [[VERDICT]]
+OK
+[[TEST]]
+NONE
+INFO:logger_655637193678439603:Generating test for assertion: this.var62 == result
+INFO:logger_655637193678439603:LLM response for prompt PromptID.General_V1 and model GPT51: [[VERDICT]]
+OK
+INFO:logger_655637193678439603:Finished test generation for <subject.subject.Subject object at 0x7f86815cfcd0>.
+INFO:logger_655637193678439603:Processing 0 tests for Structure_foo.
+INFO:logger_655637193678439603:Model comparison report written to: results/paper/full_suite_35_/Structure_foo/test/analysis/model_comparison.json
+INFO:logger_655637193678439603:Compiled 0 tests successfully.
+INFO:logger_655637193678439603:> Test generation completed successfully.
+
+---
+
+INFO:logger_655637193678439603:Running test generation for Structure_foo.
+INFO:logger_655637193678439603:Arguments: Namespace(list_llms=False, list_prompts=False, output_dir='results/paper/full_suite_35_/', command='testgen', no_invs_filtering=False, reuse_tests=False, target_class_src='/home/ldap/degiovanni@private.list.lu/specvalid/experiments/GAssert/subjects/structure_foo/src/main/java/examples/Structure.java', test_suite='/home/ldap/degiovanni@private.list.lu/specvalid/experiments/GAssert/subjects/structure_foo/src/test/java/testers/StructureTester0.java', test_driver='/home/ldap/degiovanni@private.list.lu/specvalid/experiments/GAssert/subjects/structure_foo/src/test/java/testers/StructureTesterDriver.java', buckets_assertions_file='/home/ldap/degiovanni@private.list.lu/specvalid/experiments/specfuzzer-subject-results/structure_foo/output/Structure-foo-specfuzzer-1-buckets.assertions', method='foo', models_list=['GPT51'], models_prefix=None, prompts_list=['General_V1'], specfuzzer_invs_file='/home/ldap/degiovanni@private.list.lu/specvalid/experiments/specfuzzer-subject-results/structure_foo/output/Structure-foo-specfuzzer-1.inv.gz', specfuzzer_assertions_file='/home/ldap/degiovanni@private.list.lu/specvalid/experiments/specfuzzer-subject-results/structure_foo/output/Structure-foo-specfuzzer-1.assertions')
+INFO:logger_655637193678439603:Generating tests with LLMs...
+INFO:logger_655637193678439603:Starting test generation for <subject.subject.Subject object at 0x7f86815cfcd0>...
+INFO:logger_655637193678439603:Generating test for assertion: return != -1
+INFO:logger_655637193678439603:LLM response for prompt PromptID.General_V1 and model GPT51: [[VERDICT]]
+OK
+[[TEST]]
+NONE
+INFO:logger_655637193678439603:Generating test for assertion: this.var62 == result
+INFO:logger_655637193678439603:LLM response for prompt PromptID.General_V1 and model GPT51: [[VERDICT]]
+OK
+INFO:logger_655637193678439603:Finished test generation for <subject.subject.Subject object at 0x7f86815cfcd0>.
+INFO:logger_655637193678439603:Processing 0 tests for Structure_foo.
+INFO:logger_655637193678439603:Model comparison report written to: results/paper/full_suite_35_/Structure_foo/test/analysis/model_comparison.json
+INFO:logger_655637193678439603:Compiled 0 tests successfully.
+INFO:logger_655637193678439603:> Test generation completed successfully.
+
+---
+
+FALTA TESTGEN deepseekr1

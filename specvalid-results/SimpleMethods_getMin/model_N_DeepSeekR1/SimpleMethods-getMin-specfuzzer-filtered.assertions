@@ -1,0 +1,4 @@
+FuzzedInvariant ( Integer_Variable_0 > Integer_Variable_1 - 1 ) holds for: <orig(a), return>
+FuzzedInvariant ( Integer_Variable_0 > Integer_Variable_1 + -1 ) holds for: <orig(a), return>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 - 1 ) holds for: <orig(a), return>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 + -1 ) holds for: <orig(a), return>

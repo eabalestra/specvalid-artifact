@@ -1,0 +1,9 @@
+this.left.right.right == this.right
+this.left.right == n.left
+n.right == \old(this.left.right.right)
+n.left == \old(this.right.left)
+n.left == \old(this.left.right)
+FuzzedInvariant ( no n : DoublyLinkedListNode.^(left + right) : n = n.right ) holds for: orig(this)
+FuzzedInvariant ( no n : DoublyLinkedListNode.*(left + right) : n = n.right ) holds for: orig(this)
+FuzzedInvariant ( all n : DoublyLinkedListNode.*(left + right) : n != n.right ) holds for: orig(this)
+FuzzedInvariant ( all n : DoublyLinkedListNode.*(left + right) : n != n.left ) holds for: orig(this)
