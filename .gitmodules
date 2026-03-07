@@ -1,0 +1,4 @@
+[submodule "specvalid"]
+	path = specvalid
+	url = git@github.com:eabalestra/specvalid.git
+	branch = main
