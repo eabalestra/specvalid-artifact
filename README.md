@@ -31,7 +31,7 @@ This artifact provides:
 
 - **Archival repository (Zenodo DOI):** _(to be added after Zenodo upload)_
 - **Source code:** https://github.com/eabalestra/specvalid
-- **Paper preprint:** included in this artifact as `llm-based-test-generation-for-spec-inference.pdf`
+- **Paper preprint:** included in this artifact as `improving-dynamic-specification-inference-with-llm-generated-counterexamples.pdf`
 
 ---
 
@@ -282,7 +282,7 @@ docker compose run --rm specvalid \
 specvalid-artifact/
 ├── README.md                              # This file
 ├── LICENSE                                # MIT License
-├── llm-based-test-generation-for-spec-inference.pdf  # Accepted paper
+├── improving-dynamic-specification-inference-with-llm-generated-counterexamples.pdf  # Accepted paper
 ├── Dockerfile                             # Container build definition
 ├── docker-compose.yml                     # Orchestrates specvalid + ollama services
 ├── GAssert.tar.gz                         # Java subjects (~1.1 GB)
