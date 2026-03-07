@@ -1,4 +1,4 @@
-### SpecValid — Artifact for ICST 2026
+# SpecValid — Artifact for ICST 2026
 
 > **LLM-based test generation for specification inference**
 
@@ -102,7 +102,7 @@ docker compose run --rm specvalid \
   ./experiments/run-testgen.sh -m "GPT51" -p "General_V1" -o output/results
 ```
 
-This runs SpecValid on all 44 subjects using `gpt-5.1` (the primary model used in the paper). Results are written to `./output/results/` on the host. Expected runtime: ~20–40 minutes depending on API latency.
+This runs SpecValid on all 43 subjects using `gpt-5.1` (the primary model used in the paper). Results are written to `./output/results/` on the host. Expected runtime: ~20–40 minutes depending on API latency.
 
 **OpenAI models available:**
 
@@ -152,8 +152,11 @@ Requires the [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud
 
 ```bash
 docker compose stop ollama
-docker run -d --gpus all -v specvalid-artifact_ollama_data:/root/.ollama \
-  --network specvalid-artifact_default --name specvalid-artifact-ollama-1 \
+docker run -d --gpus all \
+  -v specvalid-artifact_ollama_data:/root/.ollama \
+  --network specvalid-artifact_default \
+  --network-alias ollama \
+  --name specvalid-artifact-ollama-1 \
   ollama/ollama
 
 docker compose run --rm specvalid \
