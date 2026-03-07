@@ -42,8 +42,8 @@ This artifact includes three bundled datasets required to reproduce the experime
 | Archive                          | Size    | Contents                                                         | Source                                                          |
 | -------------------------------- | ------- | ---------------------------------------------------------------- | --------------------------------------------------------------- |
 | `GAssert.tar.gz`                 | ~1.1 GB | Java subjects under analysis (classes + test suites)             | [GAssert project](https://github.com/facumolina/evosuite-tests) |
-| `daikon-5.8.2.zip`               | ~245 MB | SpecFuzzer's Daikon variant used for dynamic invariant detection | https://plse.cs.washington.edu/daikon/                          |
-| `specfuzzer-subject-results.zip` | ~187 MB | Precomputed SpecFuzzer specifications for all subjects           | https://github.com/eabalestra/specfuzzer-subject-results        |
+| `daikon-5.8.2.zip`               | ~245 MB | SpecFuzzer's Daikon variant used for dynamic invariant detection | <https://plse.cs.washington.edu/daikon/>                        |
+| `specfuzzer-subject-results.zip` | ~187 MB | Precomputed SpecFuzzer specifications for all subjects           | <https://github.com/eabalestra/specfuzzer-subject-results>      |
 
 All data is open-source or research-use. No proprietary data is included. No human subjects or personal data are involved.
 
