@@ -29,7 +29,7 @@ This artifact provides:
 
 ## Provenance
 
-- **Archival repository (Zenodo DOI):** _(to be added after Zenodo upload)_
+- **Archival repository (Zenodo DOI):** <https://doi.org/10.5281/zenodo.18898066>
 - **Source code:** <https://github.com/eabalestra/specvalid>
 - **Paper preprint:** included in this artifact as `improving-dynamic-specification-inference-with-llm-generated-counterexamples.pdf`
 
