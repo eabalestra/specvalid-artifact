@@ -39,11 +39,11 @@ This artifact provides:
 
 This artifact includes three bundled datasets required to reproduce the experiments:
 
-| Archive                          | Size    | Contents                                                                       | Source                                                          |
-| -------------------------------- | ------- | ------------------------------------------------------------------------------ | --------------------------------------------------------------- |
-| `GAssert.tar.gz`                 | ~1.1 GB | Java subjects under analysis (classes + test suites + mutation infrastructure) | [GAssert project](https://github.com/facumolina/evosuite-tests) |
-| `daikon-5.8.2.zip`               | ~245 MB | SpecFuzzer's Daikon variant used for dynamic invariant detection               | https://plse.cs.washington.edu/daikon/                          |
-| `specfuzzer-subject-results.zip` | ~187 MB | Precomputed SpecFuzzer specifications for all subjects                         | https://github.com/eabalestra/specfuzzer-subject-results        |
+| Archive                          | Size    | Contents                                                         | Source                                                          |
+| -------------------------------- | ------- | ---------------------------------------------------------------- | --------------------------------------------------------------- |
+| `GAssert.tar.gz`                 | ~1.1 GB | Java subjects under analysis (classes + test suites)             | [GAssert project](https://github.com/facumolina/evosuite-tests) |
+| `daikon-5.8.2.zip`               | ~245 MB | SpecFuzzer's Daikon variant used for dynamic invariant detection | https://plse.cs.washington.edu/daikon/                          |
+| `specfuzzer-subject-results.zip` | ~187 MB | Precomputed SpecFuzzer specifications for all subjects           | https://github.com/eabalestra/specfuzzer-subject-results        |
 
 All data is open-source or research-use. No proprietary data is included. No human subjects or personal data are involved.
 
@@ -76,16 +76,6 @@ docker compose build
 ```
 
 This step takes ~5–10 minutes on first run (downloads ~500 MB of packages and extracts the bundled archives). Subsequent builds use the Docker cache and are faster.
-
-### Pull a local model (optional — only for Ollama-based models)
-
-```bash
-# Start the Ollama service
-docker compose up -d ollama
-
-# Pull Llama 3.3 70B Q4 (~25 GB)
-docker compose exec ollama ollama pull llama3.3:70b-instruct-q4_K_M
-```
 
 ---
 
@@ -189,7 +179,7 @@ docker compose run --rm specvalid \
   ./experiments/run-testgen.sh -m "L_DeepSeekR1Llama70_Q4" -p "General_V1" -o output/paper-results
 ```
 
-Results are written to `./output/paper-results/` on the host. Each subject directory contains the generated tests and the Daikon-inferred invariants.
+Results are written to `./output/paper-results/` on the host. Each subject directory contains the specs that survived LLM-generated counterexample filtering — i.e., the SpecFuzzer-inferred postconditions for which no counterexample could be generated.
 
 ---
 
