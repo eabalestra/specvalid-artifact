@@ -67,7 +67,7 @@ The artifact was tested on an AMD Ryzen 5 4600H (6 cores / 12 threads, 3.0 GHz),
 ### Software requirements
 
 - [Docker](https://docs.docker.com/get-docker/) 20.10+
-- [Docker Compose](https://docs.docker.com/compose/install/) v2.0+ (included in Docker Desktop)
+- [Docker Compose](https://docs.docker.com/compose/install/) v2.0+
 
 No other dependencies are needed — Java 8, Python 3.12, Daikon, and all Python packages are installed inside the container.
 
