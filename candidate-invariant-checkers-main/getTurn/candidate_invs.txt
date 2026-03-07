@@ -1,0 +1,2 @@
+FuzzedInvariant ( Integer_Variable_0 <= 1 ) holds for: <return>
+FuzzedInvariant ( Integer_Variable_0 >= -1 ) holds for: <return>

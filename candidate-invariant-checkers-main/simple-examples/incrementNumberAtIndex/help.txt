@@ -1,0 +1,175 @@
+Translating candidate invariants to Alloy format...
+spec: intArray != null
+Pattern 17.3
+spec: FuzzedInvariant ( Integer_Variable_0 >= -1 ) holds for: size(intArray[])-1
+pattern 1
+spec: FuzzedInvariant ( Integer_Variable_0 != -1 ) holds for: orig(size(intArray[]))
+pattern 1
+spec: FuzzedInvariant ( Integer_Variable_0 > -1 ) holds for: orig(size(intArray[]))
+pattern 1
+spec: FuzzedInvariant ( Integer_Variable_0 >= -1 ) holds for: orig(size(intArray[]))
+pattern 1
+spec: FuzzedInvariant ( Integer_Variable_0 >= 0 ) holds for: orig(size(intArray[]))
+pattern 1
+spec: daikon.Quant.lexGTE(intArray, \old(intArray))
+spec: FuzzedInvariant ( (Integer_Variable_0 != -1) implies (Integer_Variable_1 >= -1) ) holds for: <orig(ind), size(intArray[])-1>
+pattern 8
+spec: FuzzedInvariant ( (Integer_Variable_0 != 0) implies (Integer_Variable_1 >= -1) ) holds for: <orig(ind), size(intArray[])-1>
+pattern 8
+spec: FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) or (Integer_Variable_1 != -1) ) holds for: <orig(ind), size(intArray[])-1>
+pattern 6
+spec: FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) or (Integer_Variable_1 > 0) ) holds for: <orig(ind), size(intArray[])-1>
+pattern 6
+spec: FuzzedInvariant ( (Integer_Variable_0 <= Integer_Variable_1) implies (Integer_Variable_1 >= -1) ) holds for: <orig(ind), size(intArray[])-1>
+pattern 8
+spec: FuzzedInvariant ( (Integer_Variable_0 = -1) implies (Integer_Variable_1 > -1) ) holds for: <orig(ind), size(intArray[])-1>
+pattern 8
+spec: FuzzedInvariant ( (Integer_Variable_0 = -1) or (Integer_Variable_1 >= -1) ) holds for: <orig(ind), size(intArray[])-1>
+pattern 6
+spec: FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) implies (Integer_Variable_1 != -1) ) holds for: <orig(ind), size(intArray[])-1>
+pattern 8
+spec: FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) implies (Integer_Variable_1 >= -1) ) holds for: <orig(ind), size(intArray[])-1>
+pattern 8
+spec: FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) implies (Integer_Variable_1 >= 0) ) holds for: <orig(ind), size(intArray[])-1>
+pattern 8
+spec: FuzzedInvariant ( (Integer_Variable_0 > -1) implies (Integer_Variable_1 >= -1) ) holds for: <orig(ind), size(intArray[])-1>
+pattern 8
+spec: FuzzedInvariant ( (Integer_Variable_0 > Integer_Variable_1) or (Integer_Variable_1 != 0) ) holds for: <orig(ind), size(intArray[])-1>
+pattern 6
+spec: FuzzedInvariant ( (Integer_Variable_0 >= 0) implies (Integer_Variable_1 >= -1) ) holds for: <orig(ind), size(intArray[])-1>
+pattern 8
+spec: FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) or (Integer_Variable_1 != 0) ) holds for: <orig(ind), size(intArray[])-1>
+pattern 6
+spec: FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) or (Integer_Variable_1 >= -1) ) holds for: <orig(ind), size(intArray[])-1>
+pattern 6
+spec: FuzzedInvariant ( (Integer_Variable_0 != -1) implies (Integer_Variable_1 >= -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+pattern 8
+spec: FuzzedInvariant ( (Integer_Variable_0 != 0) implies (Integer_Variable_1 >= -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+pattern 8
+spec: FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) or (Integer_Variable_1 != -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+pattern 6
+spec: FuzzedInvariant ( (Integer_Variable_0 < -1) implies (Integer_Variable_1 != 1) ) holds for: <orig(ind), orig(size(intArray[]))>
+pattern 8
+spec: FuzzedInvariant ( (Integer_Variable_0 < -1) implies (Integer_Variable_1 >= 0) ) holds for: <orig(ind), orig(size(intArray[]))>
+pattern 8
+spec: FuzzedInvariant ( (Integer_Variable_0 < -1) or (Integer_Variable_1 > -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+pattern 6
+spec: FuzzedInvariant ( (Integer_Variable_0 < 0) or (Integer_Variable_1 != -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+pattern 6
+spec: FuzzedInvariant ( (Integer_Variable_0 < 1) or (Integer_Variable_1 != -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+pattern 6
+spec: FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) implies (Integer_Variable_1 != 1) ) holds for: <orig(ind), orig(size(intArray[]))>
+pattern 8
+spec: FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) implies (Integer_Variable_1 >= 0) ) holds for: <orig(ind), orig(size(intArray[]))>
+pattern 8
+spec: FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) or (Integer_Variable_1 != -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+pattern 6
+spec: FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) or (Integer_Variable_1 >= 0) ) holds for: <orig(ind), orig(size(intArray[]))>
+pattern 6
+spec: FuzzedInvariant ( (Integer_Variable_0 <= -1) implies (Integer_Variable_1 >= 0) ) holds for: <orig(ind), orig(size(intArray[]))>
+pattern 8
+spec: FuzzedInvariant ( (Integer_Variable_0 <= -1) or (Integer_Variable_1 != -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+pattern 6
+spec: FuzzedInvariant ( (Integer_Variable_0 <= 0) implies (Integer_Variable_1 != -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+pattern 8
+spec: FuzzedInvariant ( (Integer_Variable_0 <= 0) or (Integer_Variable_1 >= 0) ) holds for: <orig(ind), orig(size(intArray[]))>
+pattern 6
+spec: FuzzedInvariant ( (Integer_Variable_0 <= 1) implies (Integer_Variable_1 != -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+pattern 8
+spec: FuzzedInvariant ( (Integer_Variable_0 <= Integer_Variable_1) implies (Integer_Variable_1 >= -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+pattern 8
+spec: FuzzedInvariant ( (Integer_Variable_0 <= Integer_Variable_1) implies (Integer_Variable_1 >= 0) ) holds for: <orig(ind), orig(size(intArray[]))>
+pattern 8
+spec: FuzzedInvariant ( (Integer_Variable_0 = -1) implies (Integer_Variable_1 > -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+pattern 8
+spec: FuzzedInvariant ( (Integer_Variable_0 = -1) or (Integer_Variable_1 >= -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+pattern 6
+spec: FuzzedInvariant ( (Integer_Variable_0 = 0) or (Integer_Variable_1 != -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+pattern 6
+spec: FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) implies (Integer_Variable_1 != -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+pattern 8
+spec: FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) implies (Integer_Variable_1 >= -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+pattern 8
+spec: FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) implies (Integer_Variable_1 >= 0) ) holds for: <orig(ind), orig(size(intArray[]))>
+pattern 8
+spec: FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) or (Integer_Variable_1 > -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+pattern 6
+spec: FuzzedInvariant ( (Integer_Variable_0 > -1) implies (Integer_Variable_1 >= -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+pattern 8
+spec: FuzzedInvariant ( (Integer_Variable_0 > 0) or (Integer_Variable_1 != -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+pattern 6
+spec: FuzzedInvariant ( (Integer_Variable_0 > 1) or (Integer_Variable_1 != -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+pattern 6
+spec: FuzzedInvariant ( (Integer_Variable_0 >= 0) implies (Integer_Variable_1 > -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+pattern 8
+spec: FuzzedInvariant ( (Integer_Variable_0 >= 0) implies (Integer_Variable_1 >= -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+pattern 8
+spec: FuzzedInvariant ( (Integer_Variable_0 >= 1) implies (Integer_Variable_1 > -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+pattern 8
+spec: FuzzedInvariant ( (Integer_Variable_0 >= 1) or (Integer_Variable_1 >= 0) ) holds for: <orig(ind), orig(size(intArray[]))>
+pattern 6
+spec: FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) implies (Integer_Variable_1 > -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+pattern 8
+spec: FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) or (Integer_Variable_1 >= -1) ) holds for: <orig(ind), orig(size(intArray[]))>
+pattern 6
+✓ Generated 56 predicates to generated-preds.txt
+✗ Saved 1 unsupported specifications to unsupported-candidate-specs.txt
+Generating inv checker Alloy model...
+Checking validity of candidate invariants using Alloy...
+Consistent: Run checkValidityFuzzedInv1
+Consistent: Run checkValidityFuzzedInv2
+Consistent: Run checkValidityFuzzedInv3
+Consistent: Run checkValidityFuzzedInv4
+Consistent: Run checkValidityFuzzedInv5
+Consistent: Run checkValidityFuzzedInv6
+Consistent: Run checkValidityFuzzedInv7
+Consistent: Run checkValidityFuzzedInv8
+Consistent: Run checkValidityFuzzedInv9
+Consistent: Run checkValidityFuzzedInv10
+Consistent: Run checkValidityFuzzedInv11
+Consistent: Run checkValidityFuzzedInv12
+Consistent: Run checkValidityFuzzedInv13
+Consistent: Run checkValidityFuzzedInv14
+Consistent: Run checkValidityFuzzedInv15
+Consistent: Run checkValidityFuzzedInv16
+Consistent: Run checkValidityFuzzedInv17
+Consistent: Run checkValidityFuzzedInv18
+Consistent: Run checkValidityFuzzedInv19
+Consistent: Run checkValidityFuzzedInv20
+Consistent: Run checkValidityFuzzedInv21
+Consistent: Run checkValidityFuzzedInv22
+Consistent: Run checkValidityFuzzedInv23
+Consistent: Run checkValidityFuzzedInv24
+Consistent: Run checkValidityFuzzedInv25
+Consistent: Run checkValidityFuzzedInv26
+Consistent: Run checkValidityFuzzedInv27
+Consistent: Run checkValidityFuzzedInv28
+Consistent: Run checkValidityFuzzedInv29
+Consistent: Run checkValidityFuzzedInv30
+Consistent: Run checkValidityFuzzedInv31
+Consistent: Run checkValidityFuzzedInv32
+Consistent: Run checkValidityFuzzedInv33
+Consistent: Run checkValidityFuzzedInv34
+Consistent: Run checkValidityFuzzedInv35
+Consistent: Run checkValidityFuzzedInv36
+Consistent: Run checkValidityFuzzedInv37
+Consistent: Run checkValidityFuzzedInv38
+Consistent: Run checkValidityFuzzedInv39
+Consistent: Run checkValidityFuzzedInv40
+Consistent: Run checkValidityFuzzedInv41
+Consistent: Run checkValidityFuzzedInv42
+Consistent: Run checkValidityFuzzedInv43
+Consistent: Run checkValidityFuzzedInv44
+Consistent: Run checkValidityFuzzedInv45
+Consistent: Run checkValidityFuzzedInv46
+Consistent: Run checkValidityFuzzedInv47
+Consistent: Run checkValidityFuzzedInv48
+Consistent: Run checkValidityFuzzedInv49
+Consistent: Run checkValidityFuzzedInv50
+Consistent: Run checkValidityFuzzedInv51
+Consistent: Run checkValidityFuzzedInv52
+Consistent: Run checkValidityFuzzedInv53
+Consistent: Run checkValidityFuzzedInv54
+Consistent: Run checkValidityFuzzedInv55
+Consistent: Run checkValidityFuzzedInv56
+total_candidates: 56

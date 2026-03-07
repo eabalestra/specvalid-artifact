@@ -1,0 +1,9 @@
+abs
+clamp
+compare
+copySignInt
+floor
+getMin
+getTurn
+mod
+subAndCheck

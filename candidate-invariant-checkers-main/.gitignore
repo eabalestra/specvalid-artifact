@@ -1,0 +1,14 @@
+*.z3
+.idea
+
+# Ignore valid/invalid files created by check_inv_validity scritps
+valid_*
+invalid_*
+
+# Ignore files generated during the exec of the alloy chechers
+generated-preds.txt
+unsupported-candidate-specs.txt
+alloy-inv-checker*.als
+alloy-output.txt
+check-gt.als
+groundtruth-checks.als
