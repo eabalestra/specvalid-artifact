@@ -4,7 +4,7 @@
 
 This artifact accompanies the paper:
 
-> _"LLM-Based Test Generation for Spec Inference"_ — ICST 2026 Research Track
+> _"Improving Dynamic Specification Inference with LLM-Generated Counterexamples"_ — ICST 2026 Research Track
 
 ---
 
