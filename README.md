@@ -53,14 +53,16 @@ All data is open-source or research-use. No proprietary data is included. No hum
 
 ### Hardware requirements
 
-| Resource | Minimum         | Recommended                       |
-| -------- | --------------- | --------------------------------- |
-| RAM      | 8 GB            | 16 GB                             |
-| Disk     | 10 GB free      | 15 GB free                        |
-| CPU      | x86_64, 4 cores | 8+ cores                          |
-| GPU      | not required    | NVIDIA GPU (speeds up local LLMs) |
+The artifact was tested on an AMD Ryzen 5 4600H (6 cores / 12 threads, 3.0 GHz), 15 GB RAM, NVIDIA GeForce GTX 1050 3 GB, running Ubuntu 24.04.
 
-> ⚠️ Running local models via Ollama requires downloading model weights (~25 GB for Llama 3.3 70B Q4, ~43 GB for DeepSeek-R1 70B). Cloud APIs (OpenAI, HuggingFace) require only an API key.
+| Resource | API-only (OpenAI/HuggingFace) | Local models (Ollama)                    |
+| -------- | ----------------------------- | ---------------------------------------- |
+| RAM      | 8 GB                          | 16 GB                                    |
+| Disk     | 10 GB free                    | 40 GB+ free (model weights)              |
+| CPU      | x86_64, 2+ cores              | 6+ cores                                 |
+| GPU      | not required                  | NVIDIA GPU (greatly speeds up inference) |
+
+> ⚠️ Local model weights are large one-time downloads: ~25 GB for Llama 3.3 70B Q4, ~43 GB for DeepSeek-R1 70B. Using a cloud API (OpenAI or HuggingFace) requires only an API key and ~10 GB of disk for the Docker image and bundled data.
 
 ### Software requirements
 
