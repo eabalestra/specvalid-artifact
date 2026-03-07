@@ -1,0 +1,26 @@
+services:
+  ollama:
+    image: ollama/ollama:latest
+    volumes:
+      - ollama_data:/root/.ollama
+
+  specvalid:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: specvalid:artifact
+    working_dir: /app
+    command: bash
+    stdin_open: true
+    tty: true
+    environment:
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      GOOGLE_API_KEY: ${GOOGLE_API_KEY:-}
+      HUGGINGFACE_API_KEY: ${HUGGINGFACE_API_KEY:-}
+      OLLAMA_HOST: ${OLLAMA_HOST:-http://ollama:11434}
+      WITH_CCAD: ${WITH_CCAD:-false}
+    volumes:
+      - ./output:/app/output
+
+volumes:
+  ollama_data:

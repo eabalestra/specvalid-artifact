@@ -1,0 +1,9 @@
+specvalid/.git
+specvalid/.venv
+specvalid/.pytest_cache
+specvalid/.vscode
+specvalid/.dev
+specvalid/__pycache__
+specvalid/output
+specvalid/runs
+specvalid/*.pyc
