@@ -200,7 +200,31 @@ docker compose run --rm specvalid \
 
 The full list of available subjects is in `specvalid/experiments/subjects-to-run`.
 
-Results appear under `./output/quick/` on the host.
+Results appear under `./output/quick/` on the host. The output structure looks like:
+
+```bash
+output/quick/Polyupdate_sm/
+├── logs/
+│   ├── invfilter.log
+│   ├── testgen.log
+│   └── testgen_timestamp.log
+└── test/
+    ├── all_compiled_tests.java
+    └── by_model/
+        └── GPT51/
+            ├── compiled_tests.java
+            ├── fixed_tests.java
+            ├── raw_tests.java
+            └── specs/
+                ├── interest-specs.csv
+                ├── Polyupdate-sm-specfuzzer-filtered.assertions
+                └── Polyupdate-sm-specvalid.assertions
+```
+
+The key output is in `specs/`:
+
+- **`specvalid.assertions`** — the specs that survived: no LLM-generated counterexample could refute them
+- **`specfuzzer-filtered.assertions`** — the specs discarded: a counterexample was found for each one
 
 ---
 
