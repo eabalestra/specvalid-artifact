@@ -62,7 +62,7 @@ The artifact was tested on an AMD Ryzen 5 4600H (6 cores / 12 threads, 3.0 GHz),
 | CPU      | x86_64, 2+ cores              | 6+ cores                                 |
 | GPU      | not required                  | NVIDIA GPU (greatly speeds up inference) |
 
-> ⚠️ Local model weights are large one-time downloads: ~25 GB for Llama 3.3 70B Q4, ~43 GB for DeepSeek-R1 70B. Using a cloud API (OpenAI or HuggingFace) requires only an API key and ~10 GB of disk for the Docker image and bundled data.
+> ⚠️ Local model weights are large one-time downloads: ~42 GB for Llama 3.3 70B Q4, ~43 GB for DeepSeek-R1 70B. Using a cloud API (OpenAI or HuggingFace) requires only an API key and ~10 GB of disk for the Docker image and bundled data.
 
 ### Software requirements
 
@@ -130,7 +130,7 @@ docker compose run --rm specvalid \
 # 1. Start Ollama
 docker compose up -d ollama
 
-# 2. Pull Llama 3.3 70B Q4 (one-time, ~25 GB)
+# 2. Pull Llama 3.3 70B Q4 (one-time, ~42 GB)
 docker compose exec ollama ollama pull llama3.3:70b-instruct-q4_K_M
 
 # 3. Run experiments
@@ -155,6 +155,26 @@ docker compose run --rm specvalid \
   ./experiments/run-testgen.sh -m "L_Llama3370Instruct_Q4" -p "General_V1" -o output/results
 ```
 
+#### Troubleshooting: Ollama reports insufficient memory
+
+On some systems Ollama may refuse to load a 70B model claiming it needs the entire model in VRAM at once (e.g. "not enough memory: 40 GB required"). This is a known Ollama issue ([#8667](https://github.com/ollama/ollama/issues/8667)) where the memory estimate is too conservative.
+
+If you hit this, set the `OLLAMA_MAX_LOADED_MODELS` and `OLLAMA_NUM_PARALLEL` environment variables and/or limit the KV-cache size with `OLLAMA_FLASH_ATTENTION`:
+
+```bash
+docker compose stop ollama
+docker run -d \
+  -e OLLAMA_FLASH_ATTENTION=1 \
+  -e OLLAMA_KV_CACHE_TYPE=q8_0 \
+  -v specvalid-artifact_ollama_data:/root/.ollama \
+  --network specvalid-artifact_default \
+  --network-alias ollama \
+  --name specvalid-artifact-ollama-1 \
+  ollama/ollama
+```
+
+These options reduce peak memory usage significantly and allow the model to run on machines with 16–24 GB of RAM via CPU offloading.
+
 ---
 
 ### Replicate paper results
@@ -170,7 +190,7 @@ docker compose run --rm specvalid \
 # Start Ollama first (required for local models)
 docker compose up -d ollama
 
-# Llama 3.3 70B (pull once: ~25 GB)
+# Llama 3.3 70B (pull once: ~42 GB)
 docker compose exec ollama ollama pull llama3.3:70b-instruct-q4_K_M
 docker compose run --rm specvalid \
   ./experiments/run-testgen.sh -m "L_Llama3370Instruct_Q4" -p "General_V1" -o output/paper-results
@@ -292,6 +312,27 @@ docker compose run --rm specvalid \
 
 ---
 
+## Precomputed results
+
+The `specvalid-results/` directory contains the full paper results without requiring any API key or model download. Each of the 43 subjects has its own subdirectory with the output of every model evaluated in the paper:
+
+```sh
+specvalid-results/
+├── Polyupdate_sm/
+│   ├── model_GPT51/
+│   │   ├── Polyupdate-sm-specvalid.assertions          # specs that survived filtering
+│   │   └── Polyupdate-sm-specfuzzer-filtered.assertions # specs discarded by SpecValid
+│   ├── model_N_Llama3370Instruct/
+│   └── model_N_DeepSeekR1/
+├── Angle_getTurn/
+│   └── ...
+└── ... (43 subjects total)
+```
+
+These files correspond directly to the numbers reported in the paper and can be inspected without running the tool.
+
+---
+
 ## Directory structure
 
 ```sh
@@ -304,6 +345,7 @@ specvalid-artifact/
 ├── GAssert.tar.gz                         # Java subjects (~1.1 GB)
 ├── daikon-5.8.2.zip                       # SpecFuzzer's Daikon variant for dynamic invariant detection (~245 MB)
 ├── specfuzzer-subject-results.zip         # Precomputed specs (~187 MB)
+├── specvalid-results/                     # Precomputed paper results for all 43 subjects
 ├── output/                                # Experiment results (written at runtime)
 └── specvalid/                             # SpecValid source code
     ├── src/                               # Python source (cli, generators, daikon, etc.)
